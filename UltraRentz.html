@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraRentz Ltd | Real Estate Deal Sourcing</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <style>
+        /* Animated popping heading */
+        @keyframes popJump {
+            0% { opacity: 0; transform: scale(0.7) translateY(40px); }
+            60% { opacity: 1; transform: scale(1.15) translateY(-8px); }
+            80% { transform: scale(0.95) translateY(2px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .pop-heading {
+            animation: popJump 1.1s cubic-bezier(.23,1.01,.32,1) 0.2s both;
+            color: var(--accent);
+            text-shadow: 0 2px 16px #232d3b;
+            letter-spacing: 1.2px;
+        }
+        /* Animated glowing bullet points */
+        .glow-bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 0 0;
+        }
+        .glow-bullet {
+            opacity: 0;
+            margin-bottom: 18px;
+            padding-left: 0.5em;
+            font-size: 1.13rem;
+            color: #e0e6ed;
+            position: relative;
+            font-weight: 600;
+            animation: fadeInUp 0.9s cubic-bezier(.23,1.01,.32,1) forwards;
+            box-shadow: 0 0 0px #00bfae;
+            transition: box-shadow 0.3s, color 0.3s;
+        }
+        .glow-bullet:before {
+            content: '';
+            display: inline-block;
+            width: 13px;
+            height: 13px;
+            margin-right: 13px;
+            border-radius: 50%;
+            background: linear-gradient(120deg, #00bfae 60%, #ffb347 100%);
+            box-shadow: 0 0 12px #00bfae, 0 0 24px #ffb347;
+            vertical-align: middle;
+            animation: bulletGlow 1.6s infinite alternate;
+        }
+        @keyframes bulletGlow {
+            0% { box-shadow: 0 0 8px #00bfae, 0 0 12px #ffb347; }
+            100% { box-shadow: 0 0 18px #00bfae, 0 0 32px #ffb347; }
+        }
+        .glow-delay-1 { animation-delay: 0.2s; }
+        .glow-delay-2 { animation-delay: 0.5s; }
+        .glow-delay-3 { animation-delay: 0.8s; }
+        .glow-delay-4 { animation-delay: 1.1s; }
+        /* Typewriter animation for motto */
+        .typewriter {
+            display: inline-block;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 2.5px solid #ffb347;
+            animation: typing 2.2s steps(22, end) 1s 1 normal both, blink-caret 0.7s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 18ch; }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #ffb347; }
+        }
+        /* Motto Pulse Animation */
+        @keyframes mottoPulse {
+            0% { text-shadow: 0 0 0 #ffb347, 0 0 0 #fff; }
+            40% { text-shadow: 0 0 12px #ffb347, 0 0 24px #fff; }
+            60% { text-shadow: 0 0 18px #ffb347, 0 0 32px #fff; }
+            100% { text-shadow: 0 0 0 #ffb347, 0 0 0 #fff; }
+        }
+        .motto-pop {
+            animation: mottoPulse 2.2s cubic-bezier(.4,0,.2,1) infinite;
+        }
+        /* Animation Keyframes */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) forwards;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1.2s ease forwards;
+        }
+        .fade-delay-1 { animation-delay: 0.2s; }
+        .fade-delay-2 { animation-delay: 0.4s; }
+        .fade-delay-3 { animation-delay: 0.6s; }
+        .fade-delay-4 { animation-delay: 0.8s; }
+        .fade-delay-5 { animation-delay: 1s; }
+        :root {
+            --primary: #e0e6ed;
+            --secondary: #00bfae;
+            --accent: #ffb347;
+            --background: #181c24;
+            --card-bg: #232837;
+            --service-bg: #232d3b;
+        }
+        body {
+            margin: 0;
+            font-family: 'Montserrat', Arial, sans-serif;
+            background: var(--background);
+            color: var(--primary);
+        }
+        header {
+            background: linear-gradient(120deg, #181c24 0%, #232d3b 70%, #00bfae 100%);
+            color: #fff;
+            padding: 60px 0 45px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 22px auto;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #232d3b 60%, #00bfae 100%);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo svg {
+            width: 68px;
+            height: 68px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            letter-spacing: 2.5px;
+            font-weight: 800;
+            text-shadow: 0 2px 12px #181c24;
+        }
+        header p {
+            font-size: 1.25rem;
+            margin-top: 16px;
+            color: #e0e6ed;
+            text-shadow: 0 1px 8px #181c24;
+        }
+        .cta-btn {
+            margin-top: 32px;
+            padding: 16px 44px;
+            background: linear-gradient(90deg, var(--accent) 60%, var(--secondary) 100%);
+            color: #232d3b;
+            border: none;
+            border-radius: 32px;
+            font-size: 1.15rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 16px rgba(0,191,174,0.12);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        .cta-btn:hover {
+            background: linear-gradient(90deg, #ffa600 60%, #00bfae 100%);
+            color: #fff;
+            transform: scale(1.04);
+        }
+        section {
+            max-width: 950px;
+            margin: 44px auto;
+            background: var(--card-bg);
+            border-radius: 18px;
+            box-shadow: 0 4px 32px rgba(10,37,64,0.22);
+            padding: 48px 36px;
+            position: relative;
+            overflow: hidden;
+        }
+        section:before {
+            content: '';
+            position: absolute;
+            top: -80px; left: -80px;
+            width: 200px; height: 200px;
+            background: radial-gradient(circle, var(--secondary) 0%, transparent 80%);
+            opacity: 0.08;
+            z-index: 0;
+        }
+        h2 {
+            color: var(--accent);
+            margin-top: 0;
+            font-weight: 800;
+            letter-spacing: 0.7px;
+            font-size: 2.2rem;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-top: 32px;
+            position: relative;
+            z-index: 1;
+        }
+        .service-card {
+            flex: 1 1 260px;
+            background: linear-gradient(120deg, #232d3b 80%, #181c24 100%);
+            border-radius: 14px;
+            padding: 32px 24px 28px 24px;
+            box-shadow: 0 2px 18px rgba(0,191,174,0.10);
+            border: 1.5px solid var(--secondary);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 220px;
+        }
+        .service-card h3 {
+            margin-top: 0;
+            color: var(--secondary);
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .service-icon {
+            width: 28px;
+            height: 28px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        .service-card p {
+            color: #b0b8c1;
+            font-size: 1.08rem;
+            margin-top: 10px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-top: 22px;
+            position: relative;
+            z-index: 1;
+        }
+        input, textarea {
+            padding: 13px;
+            border: 1.5px solid #3a4256;
+            background: #181c24;
+            color: #e0e6ed;
+            border-radius: 8px;
+            font-size: 1.08rem;
+        }
+        input::placeholder, textarea::placeholder {
+            color: #b0b8c1;
+        }
+        button[type="submit"] {
+            background: linear-gradient(90deg, var(--secondary) 60%, var(--accent) 100%);
+            color: #232d3b;
+            border: none;
+            border-radius: 32px;
+            padding: 15px;
+            font-size: 1.13rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 16px rgba(0,191,174,0.10);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+        }
+        button[type="submit"]:hover {
+            background: linear-gradient(90deg, #009e8e 60%, #ffa600 100%);
+            color: #fff;
+            transform: scale(1.03);
+        }
+        @media (max-width: 700px) {
+            section { padding: 20px 5px; }
+            .services { flex-direction: column; gap: 18px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="fade-in-up fade-delay-1">
+        <span class="logo" style="background:#fff;">
+            <img src="/home/benpaymaster/UltraRentzLtd/CrossRent_logo.png" alt="UltraRentz Ltd Logo" style="width:80px;height:80px;object-fit:contain;display:block;margin:0 auto;filter:brightness(0) saturate(100%) invert(10%) sepia(10%) saturate(500%) hue-rotate(180deg);" />
+        </span>
+        <div style="font-size:2.1rem;font-weight:800;color:#0a2540;letter-spacing:2px;margin-bottom:2px;">UltraRentz Ltd</div>
+        <div style="font-size:1.35rem;font-weight:700;color:#ffb347;margin-bottom:10px;letter-spacing:1px;">
+            <span class="typewriter">Find. Secure. Succeed.</span>
+        </div>
+        <h1>UltraRentz Ltd</h1>
+        <p>South Wales Property Deal Sourcing | HMO (Cardiff) & Lease Options (Barry)</p>
+        <a href="#contact"><button class="cta-btn">Contact Me</button></a>
+    </header>
+
+    <section>
+    <section>
+        <h2 class="pop-heading">Why Invest in Cardiff?</h2>
+        <ul class="glow-bullet-list">
+            <li class="glow-bullet glow-delay-1">💼 <b>Strong, resilient economy</b> with growth in finance, tech, and digital media</li>
+            <li class="glow-bullet glow-delay-2">🎓 <b>High rental demand</b> from students & young professionals</li>
+            <li class="glow-bullet glow-delay-3">🏢 <b>Major regeneration</b> (Central Square, Cardiff Bay, new 15,000-seat arena)</li>
+            <li class="glow-bullet glow-delay-4">📈 <b>8.7% rental yields</b> in student areas (Cathays, Roath, July 2025)</li>
+            <li class="glow-bullet glow-delay-1">🚆 <b>Future growth</b>: Metro, Crossrail, 20% population rise forecast</li>
+            <li class="glow-bullet glow-delay-2">🏠 <b>Variety of investment areas</b> for all strategies</li>
+            <li class="glow-bullet glow-delay-3">💸 <b>High yield</b>: Cathays, Roath, Splott (affordable, high potential)</li>
+            <li class="glow-bullet glow-delay-4">🌳 <b>Capital growth</b>: Rhiwbina, Cyncoed, Cardiff Bay (families, professionals, long-term)</li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="pop-heading">Why Invest in Barry?</h2>
+        <ul class="glow-bullet-list">
+            <li class="glow-bullet glow-delay-1">🏗️ <b>£20 million</b> government funding for regeneration from April 2025</li>
+            <li class="glow-bullet glow-delay-2">📈 <b>8.5% rise</b> in average monthly private rents (Sep 2024–Sep 2025)</li>
+            <li class="glow-bullet glow-delay-3">💷 <b>£961</b> average monthly rent (Sep 2025), above Wales average</li>
+            <li class="glow-bullet glow-delay-4">🏠 High demand for <b>1-2 bedroom properties</b></li>
+            <li class="glow-bullet glow-delay-1">🚆 Excellent transport links to Cardiff (bus & train)</li>
+            <li class="glow-bullet glow-delay-2">🏙️ Second-highest average house price in Wales</li>
+            <li class="glow-bullet glow-delay-3">🌊 Mixed news: marina plan delayed, but other regeneration (docks, roads, health hub) continues</li>
+            <li class="glow-bullet glow-delay-4">🌴 Barry Island redevelopment & new restaurant complex to boost tourism</li>
+        </ul>
+    </section>
+    <h2 class="pop-heading">About UltraRentz Ltd</h2>
+        <ul class="glow-bullet-list">
+            <li class="glow-bullet glow-delay-1">Founder: Ben Paymaster</li>
+            <li class="glow-bullet glow-delay-2">Specialist in high-yield property deals for investors</li>
+            <li class="glow-bullet glow-delay-3">Current focus: HMOs in Cardiff</li>
+            <li class="glow-bullet glow-delay-4">Current focus: Lease options in Barry</li>
+        </ul>
+    </section>
+
+    <section>
+    <h2 class="fade-in-up fade-delay-2">My Current Strategies</h2>
+    <div class="services">
+            <div class="service-card fade-in-up fade-delay-3">
+                <h3><span class="service-icon">🏠</span>Cardiff: HMO Investments</h3>
+                <ul class="glow-bullet-list" style="margin-top:10px;">
+                    <li class="glow-bullet glow-delay-1">✔️ High cashflow, strong rental demand</li>
+                    <li class="glow-bullet glow-delay-2">✔️ Fully compliant, hands-off investing</li>
+                    <li class="glow-bullet glow-delay-3">✔️ Local expertise for smart sourcing</li>
+                </ul>
+            </div>
+            <div class="service-card fade-in-up fade-delay-4">
+                <h3><span class="service-icon">🔑</span>Barry: Lease Options</h3>
+                <ul class="glow-bullet-list" style="margin-top:10px;">
+                    <li class="glow-bullet glow-delay-1">💡 Control property with low capital</li>
+                    <li class="glow-bullet glow-delay-2">💡 Flexible, creative deal structures</li>
+                    <li class="glow-bullet glow-delay-3">💡 Build your portfolio quickly & safely</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="fade-in-up fade-delay-2">Content & Resources</h2>
+        <p class="fade-in-up fade-delay-3">Stay up to date with my latest property reports, market insights, and video content. I regularly share valuable information to help investors and landlords make informed decisions.</p>
+        <ul class="fade-in-up fade-delay-4">
+            <li><a href="#">Latest HMO Market Report (Cardiff)</a> <span style="color: #00bfae; font-size: 0.95em;">[PDF]</span></li>
+            <li><a href="#">Lease Options Explained: Video Guide</a> <span style="color: #00bfae; font-size: 0.95em;">[YouTube]</span></li>
+            <li><a href="#">Barry Property Trends 2025</a> <span style="color: #00bfae; font-size: 0.95em;">[PDF]</span></li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2 class="fade-in-up fade-delay-2">Contact Me</h2>
+        <div class="fade-in-up fade-delay-3" style="display:flex;align-items:center;gap:24px;margin-bottom:18px;">
+            <img src="https://ui-avatars.com/api/?name=Ben+Paymaster&background=232d3b&color=ffb347&size=96&rounded=true" alt="Ben Paymaster" style="border-radius:50%;box-shadow:0 2px 12px #181c24;min-width:72px;">
+            <div>
+                <div style="font-size:1.1rem;font-weight:600;color:#ffb347;margin-bottom:4px;">Ben Paymaster</div>
+                <div style="color:#b0b8c1;font-size:0.98rem;">Founder, UltraRentz Ltd</div>
+                <div style="margin-top:8px;font-size:1.05rem;color:#e0e6ed;">Get exclusive access to off-market deals and expert property sourcing advice.</div>
+            </div>
+        </div>
+        <ul class="fade-in-up fade-delay-4" style="list-style:none; padding:0; margin-bottom:18px;">
+            <li><b>Email:</b> <a href="mailto:ben@ultrarentz.co.site">ben@ultrarentz.co.site</a></li>
+            <li><b>Phone:</b> <a href="tel:+447471111593">074 71111 593</a></li>
+            <li style="margin-top:8px;">
+                <a href="https://www.linkedin.com/" target="_blank" style="color:#00bfae;text-decoration:none;font-size:1.2rem;margin-right:12px;">LinkedIn</a>
+                <a href="https://wa.me/447471111593" target="_blank" style="color:#25d366;text-decoration:none;font-size:1.2rem;">WhatsApp</a>
+            </li>
+        </ul>
+        <form class="fade-in-up fade-delay-5" style="margin-bottom:10px;">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="4" placeholder="How can I help you?" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <div class="fade-in-up fade-delay-5" style="font-size:0.98rem;color:#b0b8c1;margin-bottom:10px;">Your details are safe and never shared. I reply to all messages within 24 hours.</div>
+        <div class="fade-in-up fade-delay-5" style="background:rgba(0,191,174,0.08);border-left:4px solid #00bfae;padding:16px 18px;border-radius:10px;font-size:1.05rem;color:#e0e6ed;box-shadow:0 2px 12px #181c24;margin-top:18px;">
+            <b>Testimonial:</b> <br>
+            <span style="font-style:italic;">“Ben’s local knowledge and attention to detail helped me secure my first HMO in Cardiff. Highly recommended!”</span><br>
+            <span style="color:#ffb347;font-size:0.98rem;">— J. Morgan, Investor</span>
+        </div>
+    </section>
+
+</body>
+</html>
