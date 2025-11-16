@@ -1,15 +1,15 @@
-# UltraRentz Ltd – Animated Property Deal Sourcing Landing Page
+# UltraRentz Ltd – Property Deal Sourcing Landing Page
 
 ## Overview
-UltraRentz Ltd is a modern, animated landing page for a South Wales property deal sourcing business. It features dynamic content, investment highlights, and a high-converting contact form for investors and partners.
+UltraRentz Ltd is a modern, visually engaging landing page for a South Wales property deal sourcing business. It features dynamic content, investment highlights, and a high-converting contact form for investors and partners.
 
 ## Vision & Goals
 - Become the #1 deal sourcer in Barry by the end of 2026
 - Become a top 5 HMO deal sourcer in Cardiff by the end of 2026
 
 ## Features
-- Animated, visually engaging hero section and motto
-- Glowing, animated bullet points for key investment facts
+- Visually engaging hero section and motto
+- Glowing, dynamic bullet points for key investment facts
 - Strategy cards with icons and concise benefits
 - "Why Invest" sections for Barry and Cardiff with up-to-date market data
 - Personalised contact section with privacy note, social links, and testimonial
