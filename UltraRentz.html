@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" type="image/png" href="https://www.svgrepo.com/show/384674/house-home-property-real-estate.svg">
+    <meta name="description" content="UltraRentz Ltd – Animated, modern landing page for South Wales property deal sourcing. Investment highlights, contact form, and dynamic content for investors.">
+    <meta name="keywords" content="property sourcing, HMO, lease options, Cardiff, Barry, South Wales, real estate, investment, deals, UltraRentz">
+    <meta property="og:title" content="UltraRentz Ltd – South Wales Property Deal Sourcing">
+    <meta property="og:description" content="Animated, modern landing page for property investors. High-yield HMOs, creative lease options, and expert sourcing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.svgrepo.com/show/384674/house-home-property-real-estate.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UltraRentz Ltd | Real Estate Deal Sourcing</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
     <style>
+        body {
+            /* Subtle background gradient for extra depth */
+            background: linear-gradient(135deg, #181c24 0%, #232d3b 60%, #232d3b 100%);
+        }
         /* Animated popping heading */
         @keyframes popJump {
             0% { opacity: 0; transform: scale(0.7) translateY(40px); }
@@ -288,10 +300,8 @@
 </head>
 <body>
     <header class="fade-in-up fade-delay-1">
-        <span class="logo" style="background:#fff;">
-            <img src="/home/benpaymaster/UltraRentzLtd/CrossRent_logo.png" alt="UltraRentz Ltd Logo" style="width:80px;height:80px;object-fit:contain;display:block;margin:0 auto;filter:brightness(0) saturate(100%) invert(10%) sepia(10%) saturate(500%) hue-rotate(180deg);" />
-        </span>
-        <div style="font-size:2.1rem;font-weight:800;color:#0a2540;letter-spacing:2px;margin-bottom:2px;">UltraRentz Ltd</div>
+        <!-- Logo removed for cleaner look -->
+    <!-- Site title removed for cleaner header -->
         <div style="font-size:1.35rem;font-weight:700;color:#ffb347;margin-bottom:10px;letter-spacing:1px;">
             <span class="typewriter">Find. Secure. Succeed.</span>
         </div>
@@ -379,10 +389,10 @@
             </div>
         </div>
         <ul class="fade-in-up fade-delay-4" style="list-style:none; padding:0; margin-bottom:18px;">
-            <li><b>Email:</b> <a href="mailto:ben@ultrarentz.co.site">ben@ultrarentz.co.site</a></li>
-            <li><b>Phone:</b> <a href="tel:+447471111593">074 71111 593</a></li>
+            <li><b>Email:</b> <a href="mailto:ben@ultrarentz.co.site" target="_blank">ben@ultrarentz.co.site</a></li>
+            <li><b>Phone:</b> <a href="tel:+447471111593" target="_blank">074 71111 593</a></li>
             <li style="margin-top:8px;">
-                <a href="https://www.linkedin.com/" target="_blank" style="color:#00bfae;text-decoration:none;font-size:1.2rem;margin-right:12px;">LinkedIn</a>
+                <!-- LinkedIn link to be added later -->
                 <a href="https://wa.me/447471111593" target="_blank" style="color:#25d366;text-decoration:none;font-size:1.2rem;">WhatsApp</a>
             </li>
         </ul>
@@ -390,13 +400,15 @@
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
             <textarea name="message" rows="4" placeholder="How can I help you?" required></textarea>
-            <button type="submit">Send Message</button>
+            <button type="submit" onclick="event.preventDefault();document.getElementById('thankyou-message').style.display='block';">Send Message</button>
         </form>
-        <div class="fade-in-up fade-delay-5" style="font-size:0.98rem;color:#b0b8c1;margin-bottom:10px;">Your details are safe and never shared. I reply to all messages within 24 hours.</div>
-        <div class="fade-in-up fade-delay-5" style="background:rgba(0,191,174,0.08);border-left:4px solid #00bfae;padding:16px 18px;border-radius:10px;font-size:1.05rem;color:#e0e6ed;box-shadow:0 2px 12px #181c24;margin-top:18px;">
-            <b>Testimonial:</b> <br>
-            <span style="font-style:italic;">“Ben’s local knowledge and attention to detail helped me secure my first HMO in Cardiff. Highly recommended!”</span><br>
-            <span style="color:#ffb347;font-size:0.98rem;">— J. Morgan, Investor</span>
+        <div id="thankyou-message" style="display:none;background:#232d3b;color:#00bfae;padding:14px 18px;border-radius:8px;font-size:1.08rem;margin-bottom:10px;box-shadow:0 2px 8px #181c24;">Thank you for your message! I will reply within 24 hours.</div>
+        </form>
+    <div class="fade-in-up fade-delay-5" style="font-size:0.98rem;color:#b0b8c1;margin-bottom:10px;">Your details are safe and never shared. I reply to all messages within 24 hours.</div>
+        <!-- Future Testimonials Section -->
+        <div class="fade-in-up fade-delay-5" style="background:rgba(0,191,174,0.05);border-left:4px dashed #00bfae;padding:14px 16px;border-radius:10px;font-size:1.01rem;color:#b0b8c1;box-shadow:0 2px 8px #181c24;margin-top:18px;">
+            <b>Testimonials coming soon!</b><br>
+            <span style="font-style:italic;">Check back for feedback from investors and partners as UltraRentz grows.</span>
         </div>
     </section>
 
