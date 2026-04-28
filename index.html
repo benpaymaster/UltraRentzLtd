@@ -2,1878 +2,291 @@
 <html lang="en">
 <head>
     <link rel="icon" type="image/png" href="https://www.svgrepo.com/show/384674/house-home-property-real-estate.svg">
-    <meta name="description" content="UltraRentz Ltd – Premium property exit solutions for landlords across Cardiff/Barry, Leicester, Grimsby & Leeds. Specializing in purchase lease options, social housing & HMOs. Perfect for retiring landlords or those moving abroad.">
-    <meta name="keywords" content="landlord exit, property exit strategy, retiring landlords, move abroad, purchase lease options, social housing, HMO, Cardiff, Barry, Leicester, Grimsby, Leeds, property sourcing, real estate, investment, UltraRentz">
-    <meta property="og:title" content="UltraRentz Ltd – Premium Property Exit Solutions for Landlords">
-    <meta property="og:description" content="Specialist in helping landlords exit the property market. Purchase lease options, social housing & HMO solutions across Cardiff/Barry, Leicester, Grimsby & Leeds.">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://www.svgrepo.com/show/384674/house-home-property-real-estate.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UltraRentz Ltd | Premium Property Exit Solutions for Landlords</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+    <title>UltraRentz Ltd | Exit With Profit, Exit With A Smile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body {
-            /* Subtle background gradient for extra depth */
-            background: linear-gradient(135deg, #181c24 0%, #232d3b 60%, #232d3b 100%);
-        }
-        /* Animated popping heading */
-        @keyframes popJump {
-            0% { opacity: 0; transform: scale(0.7) translateY(40px); }
-            60% { opacity: 1; transform: scale(1.15) translateY(-8px); }
-            80% { transform: scale(0.95) translateY(2px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        .pop-heading {
-            animation: popJump 1.1s cubic-bezier(.23,1.01,.32,1) 0.2s both;
-            color: var(--accent);
-            text-shadow: 0 2px 16px #232d3b;
-            letter-spacing: 1.2px;
-        }
-        /* Animated glowing bullet points */
-        .glow-bullet-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 0 0;
-        }
-        .glow-bullet {
-            opacity: 0;
-            margin-bottom: 18px;
-            padding-left: 0.5em;
-            font-size: 1.13rem;
-            color: #e0e6ed;
-            position: relative;
-            font-weight: 600;
-            animation: fadeInUp 0.9s cubic-bezier(.23,1.01,.32,1) forwards;
-            box-shadow: 0 0 0px #00bfae;
-            transition: box-shadow 0.3s, color 0.3s;
-        }
-        .glow-bullet:before {
-            content: '';
-            display: inline-block;
-            width: 13px;
-            height: 13px;
-            margin-right: 13px;
-            border-radius: 50%;
-            background: linear-gradient(120deg, #00bfae 60%, #ffb347 100%);
-            box-shadow: 0 0 12px #00bfae, 0 0 24px #ffb347;
-            vertical-align: middle;
-            animation: bulletGlow 1.6s infinite alternate;
-        }
-        @keyframes bulletGlow {
-            0% { box-shadow: 0 0 8px #00bfae, 0 0 12px #ffb347; }
-            100% { box-shadow: 0 0 18px #00bfae, 0 0 32px #ffb347; }
-        }
-        .glow-delay-1 { animation-delay: 0.2s; }
-        .glow-delay-2 { animation-delay: 0.5s; }
-        .glow-delay-3 { animation-delay: 0.8s; }
-        .glow-delay-4 { animation-delay: 1.1s; }
-        /* Typewriter animation for motto */
-        .typewriter {
-            display: inline-block;
-            overflow: hidden;
-            white-space: nowrap;
-            border-right: 2px solid #00bfae;
-            animation: typing 2.5s steps(30) forwards;
-        }
+        :root { --primary: #00bfae; --secondary: #ffb347; }
+        * { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); }
+        .text-gradient { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .section-fade { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+        .section-fade.visible { opacity: 1; transform: translateY(0); }
+        .cta-button { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); transition: all 0.3s ease; }
+        .content-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem; }
+        .content-stack { background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.08); padding: 1.25rem; border-radius: 1rem; margin-top: 1rem; }
         
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
-            border-right: 2.5px solid #ffb347;
-            animation: typing 2.2s steps(22, end) 1s 1 normal both, blink-caret 0.7s step-end infinite;
-        }
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 18ch; }
-        }
-        @keyframes blink-caret {
-            from, to { border-color: transparent; }
-            50% { border-color: #ffb347; }
-        }
-        /* Motto Pulse Animation */
-        @keyframes mottoPulse {
-            0% { text-shadow: 0 0 0 #ffb347, 0 0 0 #fff; }
-            40% { text-shadow: 0 0 12px #ffb347, 0 0 24px #fff; }
-            60% { text-shadow: 0 0 18px #ffb347, 0 0 32px #fff; }
-            100% { text-shadow: 0 0 0 #ffb347, 0 0 0 #fff; }
-        }
-        .motto-pop {
-            animation: mottoPulse 2.2s cubic-bezier(.4,0,.2,1) infinite;
-        }
-        /* Animation Keyframes */
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        .fade-in-up {
-            opacity: 0;
-            animation: fadeInUp 1s cubic-bezier(.23,1.01,.32,1) forwards;
-        }
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1.2s ease forwards;
-        }
-        .fade-delay-1 { animation-delay: 0.2s; }
-        .fade-delay-2 { animation-delay: 0.4s; }
-        .fade-delay-3 { animation-delay: 0.6s; }
-        .fade-delay-4 { animation-delay: 0.8s; }
-        .fade-delay-5 { animation-delay: 1s; }
-        :root {
-            --primary: #e0e6ed;
-            --secondary: #00bfae;
-            --accent: #ffb347;
-            --background: #181c24;
-            --card-bg: #232837;
-            --service-bg: #232d3b;
-        }
-        body {
-            margin: 0;
-            font-family: 'Montserrat', Arial, sans-serif;
-            background: var(--background);
-            color: var(--primary);
-        }
-        header {
-            background: linear-gradient(120deg, #181c24 0%, #232d3b 70%, #00bfae 100%);
-            color: #fff;
-            padding: 60px 0 45px 0;
-            text-align: center;
-            position: relative;
-            box-shadow: 0 4px 32px 0 rgba(0,0,0,0.25);
-        }
-        .logo {
-            display: block;
-            margin: 0 auto 22px auto;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #232d3b 60%, #00bfae 100%);
-            box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .logo svg {
-            width: 68px;
-            height: 68px;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.8rem;
-            letter-spacing: 2.5px;
-            font-weight: 800;
-            text-shadow: 0 2px 12px #181c24;
-        }
-        header p {
-            font-size: 1.25rem;
-            margin-top: 16px;
-            color: #e0e6ed;
-            text-shadow: 0 1px 8px #181c24;
-        }
-        .cta-btn {
-            margin-top: 32px;
-            padding: 16px 44px;
-            background: linear-gradient(90deg, var(--accent) 60%, var(--secondary) 100%);
-            color: #232d3b;
-            border: none;
-            border-radius: 32px;
-            font-size: 1.15rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 2px 16px rgba(0,191,174,0.12);
-            transition: background 0.2s, color 0.2s, transform 0.2s;
-        }
-        .cta-btn:hover {
-            background: linear-gradient(90deg, #ffa600 60%, #00bfae 100%);
-            color: #fff;
-            transform: scale(1.04);
-        }
-        section {
-            max-width: 950px;
-            margin: 44px auto;
-            background: var(--card-bg);
-            border-radius: 18px;
-            box-shadow: 0 4px 32px rgba(10,37,64,0.22);
-            padding: 48px 36px;
-            position: relative;
-            overflow: hidden;
-        }
-        section:before {
-            content: '';
-            position: absolute;
-            top: -80px; left: -80px;
-            width: 200px; height: 200px;
-            background: radial-gradient(circle, var(--secondary) 0%, transparent 80%);
-            opacity: 0.08;
-            z-index: 0;
-        }
-        h2 {
-            color: var(--accent);
-            margin-top: 0;
-            font-weight: 800;
-            letter-spacing: 0.7px;
-            font-size: 2.2rem;
-            margin-bottom: 18px;
-            position: relative;
-            z-index: 1;
-        }
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-            margin-top: 32px;
-            position: relative;
-            z-index: 1;
-        }
-        .service-card {
-            flex: 1 1 260px;
-            background: linear-gradient(120deg, #232d3b 80%, #181c24 100%);
-            border-radius: 14px;
-            padding: 32px 24px 28px 24px;
-            box-shadow: 0 2px 18px rgba(0,191,174,0.10);
-            border: 1.5px solid var(--secondary);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            min-width: 220px;
-        }
-        .service-card h3 {
-            margin-top: 0;
-            color: var(--secondary);
-            font-size: 1.25rem;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .service-icon {
-            width: 28px;
-            height: 28px;
-            margin-right: 6px;
-            vertical-align: middle;
-        }
-        .service-card p {
-            color: #b0b8c1;
-            font-size: 1.08rem;
-            margin-top: 10px;
-        }
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            margin-top: 22px;
-            position: relative;
-            z-index: 1;
-        }
-        input, textarea {
-            padding: 13px;
-            border: 1.5px solid #3a4256;
-            background: #181c24;
-            color: #e0e6ed;
-            border-radius: 8px;
-            font-size: 1.08rem;
-        }
-        input::placeholder, textarea::placeholder {
-            color: #b0b8c1;
-        }
-        button[type="submit"] {
-            background: linear-gradient(90deg, var(--secondary) 60%, var(--accent) 100%);
-            color: #232d3b;
-            border: none;
-            border-radius: 32px;
-            padding: 15px;
-            font-size: 1.13rem;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 2px 16px rgba(0,191,174,0.10);
-            transition: background 0.2s, color 0.2s, transform 0.2s;
-        }
-        button[type="submit"]:hover {
-            background: linear-gradient(90deg, #009e8e 60%, #ffa600 100%);
-            color: #fff;
-            transform: scale(1.03);
-        }
-        @media (max-width: 700px) {
-            section { padding: 20px 5px; }
-            .services { flex-direction: column; gap: 18px; }
-        }
+        /* Mobile Menu */
+        #mobile-menu { transition: transform 0.3s ease-in-out; transform: translateX(100%); position: fixed; inset: 0; background: #0f172a; z-index: 100; }
+        #mobile-menu.active { transform: translateX(0); }
         
-        /* Tab Navigation Styles */
-        .tab-navigation {
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin: 30px 0;
-            flex-wrap: wrap;
-            background: rgba(35, 45, 59, 0.8);
-            padding: 15px;
-            border-radius: 15px;
-            border: 1px solid rgba(0, 191, 174, 0.3);
-        }
-        
-        .tab-button {
-            background: linear-gradient(135deg, #232d3b 80%, #181c24 100%);
-            color: #b0b8c1;
-            border: 2px solid transparent;
-            padding: 12px 20px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .tab-button:hover {
-            background: linear-gradient(135deg, #00bfae 20%, #232d3b 100%);
-            color: #ffb347;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0, 191, 174, 0.3);
-        }
-        
-        .tab-button.active {
-            background: linear-gradient(90deg, #00bfae 60%, #ffb347 100%);
-            color: #232d3b;
-            border-color: #ffb347;
-            box-shadow: 0 4px 20px rgba(0, 191, 174, 0.4);
-        }
-        
-        .tab-content {
-            display: none;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        
-        .tab-content.active {
-            display: block;
-        }
-        
-        /* Make sure the first tab is visible */
-        #market-insights {
-            display: block;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        /* FAQ Interaction */
+        .faq-trigger:checked ~ .faq-content { max-height: 500px; padding-bottom: 1rem; }
+        .step-number { background: linear-gradient(135deg, var(--primary), var(--secondary)); }
+        .floating-wa { position: fixed; bottom: 20px; right: 20px; z-index: 1000; }
     </style>
 </head>
-<body>
-    <header class="fade-in-up fade-delay-1">
-        <!-- Brand Section -->
-        <div style="display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:20px;">
-            <img src="ben-photo.jpg" alt="Adegbenga (Ben) Ogungbeje" style="border-radius:50%;box-shadow:0 4px 20px rgba(0,191,174,0.3);width:200px;height:200px;object-fit:cover;border:3px solid #00bfae;">
-            <div>
-                <h1 style="margin:0;font-size:2.5rem;letter-spacing:2px;font-weight:800;color:#ffb347;text-shadow:0 2px 12px #181c24;">UltraRentz</h1>
-                <p style="margin:5px 0 0 0;color:#00bfae;font-size:1.1rem;font-weight:600;letter-spacing:1px;">Your profit is our business</p>
-            </div>
-        </div>
-        
-        <div style="font-size:1.35rem;font-weight:700;color:#ffb347;margin-bottom:15px;letter-spacing:1px;">
-            Ready to Exit? We'll Handle Everything.
-        </div>
-        
-        <h2 style="margin:0;font-size:2rem;letter-spacing:1px;font-weight:700;color:#e0e6ed;">Property Exit Solutions for Landlords</h2>
-        <p>Specializing in Purchase Lease Options & Social Housing across Cardiff/Barry, Leicester, Grimsby & Leeds. Perfect for retiring landlords or those moving abroad.</p>
-        <div style="margin-top:20px;display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
-            <a href="#contact"><button class="cta-btn">Get Your Free Exit Strategy</button></a>
-            <a href="#why-exit" style="color:#ffb347;text-decoration:none;font-weight:600;padding:16px 24px;border:2px solid #ffb347;border-radius:32px;transition:all 0.3s;">Learn More</a>
-        </div>
-        <div style="margin-top:25px;font-size:0.95rem;color:#b0b8c1;">
-            <span style="color:#00bfae;font-weight:600;">✓ No Hassle</span> • 
-            <span style="color:#00bfae;font-weight:600;">✓ Guaranteed Rent</span> • 
-            <span style="color:#00bfae;font-weight:600;">✓ Full Management</span> • 
-            <span style="color:#00bfae;font-weight:600;">✓ Quick Exit</span>
-        </div>
-    </header>
+<body class="gradient-bg text-gray-100">
 
-    <!-- Tab Navigation -->
-    <div class="tab-navigation">
-        <button class="tab-button active" onclick="showTab('market-insights')">Market Insights</button>
-        <button class="tab-button" onclick="showTab('area-reviews')">Area Reviews</button>
-        <button class="tab-button" onclick="showTab('education')">Education</button>
-        <button class="tab-button" onclick="showTab('tools')">Tools</button>
-        <button class="tab-button" onclick="showTab('renters-bill')">Renters Reform Bill</button>
-        <button class="tab-button" onclick="showTab('selective-licensing')">Selective Licensing</button>
-        <button class="tab-button" onclick="showTab('purchase-lease-options')">Purchase Lease Options</button>
-        <button class="tab-button" onclick="showTab('hmos')">HMOs</button>
-        <button class="tab-button" onclick="showTab('daily-tips')">Daily Property Tips</button>
-        <button class="tab-button" onclick="showTab('deal-sourcing')">DEAL SOURCING</button>
+    <a href="https://wa.me/447471111593" class="floating-wa bg-green-500 p-4 rounded-full shadow-2xl border-2 border-white hover:scale-110 transition">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.5-5.688-1.448l-6.305 1.652zm6.599-3.835c1.544.917 3.41 1.401 5.304 1.402 5.454 0 9.893-4.438 9.895-9.894.001-2.644-1.03-5.13-2.902-7.003-1.871-1.872-4.358-2.903-7.004-2.904-5.456 0-9.893 4.439-9.896 9.895-.001 1.848.513 3.65 1.485 5.215l-.973 3.553 3.641-.955z"/></svg>
+    </a>
+
+    <nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="container mx-auto px-4 flex justify-between items-center py-4">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center font-bold text-white shadow-lg">U</div>
+                <span class="text-xl font-bold tracking-tight">UltraRentz Ltd</span>
+            </div>
+            
+            <div class="hidden lg:flex items-center space-x-6 text-[10px] font-black uppercase tracking-widest">
+                <a href="#solutions" class="text-gray-400 hover:text-teal-400 transition">Strategies</a>
+                <a href="#education-vault" class="text-gray-400 hover:text-teal-400 transition">Education</a>
+                <a href="#city-hubs" class="text-gray-400 hover:text-teal-400 transition">City Hubs</a>
+                <a href="mailto:ben@ultrarentz.com" target="_blank" class="text-gray-400 hover:text-teal-400 underline decoration-teal-500/50 transition-all">ben@ultrarentz.com</a>
+                <a href="https://wa.me/447471111593" class="cta-button text-white px-5 py-2 rounded-full shadow-lg font-bold">Consult Ben</a>
+            </div>
+
+            <button onclick="toggleMenu()" class="lg:hidden text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="p-8 flex flex-col space-y-8 lg:hidden">
+        <button onclick="toggleMenu()" class="self-end text-white text-4xl">&times;</button>
+        <a href="#solutions" onclick="toggleMenu()" class="text-2xl font-bold">Strategies</a>
+        <a href="#education-vault" onclick="toggleMenu()" class="text-2xl font-bold">Education</a>
+        <a href="#city-hubs" onclick="toggleMenu()" class="text-2xl font-bold">City Hubs</a>
+        <a href="mailto:ben@ultrarentz.com" target="_blank" class="text-2xl font-bold text-teal-400">Email Ben</a>
+        <a href="https://wa.me/447471111593" class="cta-button text-center text-white py-4 rounded-xl font-bold">WhatsApp Ben</a>
     </div>
 
-    <!-- Tab Content Container -->
-    <div class="tab-container">
-        <!-- Market Insights Tab -->
-        <div id="market-insights" class="tab-content active">
-            <section>
-                <h2 class="pop-heading">Recent Deal Analysis</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Real exit strategies and their results. See how landlords are successfully exiting the market.</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;margin-top:30px;">
-                    <!-- Deal 1 -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;position:relative;">
-                        <div style="position:absolute;top:-10px;left:20px;background:#00bfae;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">SOCIAL HOUSING</div>
-                        <h4 style="color:#ffb347;margin-top:15px;font-size:1.1rem;">3-Bed Terrace &bull; Cardiff</h4>
-                        <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Landlord: Retiring to Spain</div>
-                        
-                        <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                                <span style="color:#b0b8c1;">Previous Rent:</span>
-                                <span style="color:#ff6b6b;font-weight:600;">&pound;850/month</span>
-                            </div>
-                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                                <span style="color:#b0b8c1;">Social Housing Rate:</span>
-                                <span style="color:#00bfae;font-weight:600;">&pound;1,100/month</span>
-                            </div>
-                            <div style="display:flex;justify-content:space-between;">
-                                <span style="color:#b0b8c1;">5-Year Guarantee:</span>
-                                <span style="color:#ffb347;font-weight:600;">&pound;66,000 Total</span>
-                            </div>
-                        </div>
-                        
-                        <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                            <strong>Exit Timeline:</strong> 6 weeks<br>
-                            <strong>Management:</strong> Zero hassle<br>
-                            <strong>Result:</strong> 29% income increase, guaranteed income
-                        </div>
-                        <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">Read Full Analysis &rarr;</a>
-                    </div>
-                    
-                    <!-- Deal 2 -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;position:relative;">
-                        <div style="position:absolute;top:-10px;left:20px;background:#ffb347;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">LEASE OPTION</div>
-                        <h4 style="color:#00bfae;margin-top:15px;font-size:1.1rem;">2-Bed Flat &bull; Barry</h4>
-                        <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Landlord: Moving abroad</div>
-                        
-                        <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                                <span style="color:#b0b8c1;">Property Value:</span>
-                                <span style="color:#ff6b6b;font-weight:600;">&pound;180,000</span>
-                            </div>
-                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                                <span style="color:#b0b8c1;">Option Payment:</span>
-                                <span style="color:#00bfae;font-weight:600;">&pound;15,000</span>
-                            </div>
-                            <div style="display:flex;justify-content:space-between;">
-                                <span style="color:#b0b8c1;">Monthly Income:</span>
-                                <span style="color:#ffb347;font-weight:600;">&pound;650/month</span>
-                            </div>
-                        </div>
-                        
-                        <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                            <strong>Exit Timeline:</strong> 8 weeks<br>
-                            <strong>Capital Released:</strong> &pound;15,000<br>
-                            <strong>Result:</strong> Immediate cash + ongoing income
-                        </div>
-                        <a href="#" style="color:#ffb347;text-decoration:none;font-weight:600;font-size:0.9rem;">Read Full Analysis &rarr;</a>
-                    </div>
-                    
-                    <!-- Deal 3 -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;position:relative;">
-                        <div style="position:absolute;top:-10px;left:20px;background:#00bfae;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">HMO CONVERSION</div>
-                        <h4 style="color:#ffb347;margin-top:15px;font-size:1.1rem;">4-Bed House &bull; Leicester</h4>
-                        <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Landlord: Portfolio consolidation</div>
-                        
-                        <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                                <span style="color:#b0b8c1;">Single Let Rent:</span>
-                                <span style="color:#ff6b6b;font-weight:600;">&pound;950/month</span>
-                            </div>
-                            <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                                <span style="color:#b0b8c1;">HMO Gross Rent:</span>
-                                <span style="color:#00bfae;font-weight:600;">&pound;1,800/month</span>
-                            </div>
-                            <div style="display:flex;justify-content:space-between;">
-                                <span style="color:#b0b8c1;">Net Income:</span>
-                                <span style="color:#ffb347;font-weight:600;">&pound;1,400/month</span>
-                            </div>
-                        </div>
-                        
-                        <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                            <strong>Exit Timeline:</strong> 12 weeks<br>
-                            <strong>Income Increase:</strong> 47%<br>
-                            <strong>Result:</strong> Fully managed, high-yield exit
-                        </div>
-                        <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">Read Full Analysis &rarr;</a>
-                    </div>
-                </div>
-                
-                <div style="background:rgba(0,191,174,0.1);border-left:4px solid #00bfae;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#ffb347;">&pound; New Deal Analysis Weekly:</strong> Get detailed breakdowns of successful exits delivered to your inbox. 
-                        <span style="color:#00bfae;font-weight:600;">Subscribe to our exclusive deal analysis newsletter.</span>
+    <section class="pt-40 pb-12 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="section-fade">
+                    <h1 class="text-6xl md:text-7xl font-black text-white mb-6 leading-[0.9]">
+                        Exit with <span class="text-gradient">Profit</span>,<br>Exit with a <span class="text-gradient">Smile.</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-8 font-light leading-relaxed">
+                        Expert strategies to navigate the 2026 property legislative shift via <strong>Purchase Lease Options</strong> and <strong>Social Housing</strong> exits.
                     </p>
-                </div>
-            </section>
-            
-            <section>
-                <h2 class="pop-heading">Current Exit Opportunities</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Hand-selected properties perfect for landlord exit strategies. Updated weekly.</p>
-                
-                <div style="background:linear-gradient(135deg,rgba(0,191,174,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #00bfae;border-radius:14px;padding:20px;margin-bottom:30px;">
-                    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
-                        <div>
-                            <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">&ud83d\udd25 Hot Deal Alert</h3>
-                            <p style="color:#e0e6ed;font-size:0.95rem;margin:5px 0;">3-Bed HMO-Ready Property - Cardiff</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                        <div class="bg-red-500/10 border border-red-500/30 p-5 rounded-2xl">
+                            <p class="text-[10px] font-black text-red-500 uppercase mb-1 tracking-widest">Leeds Licensing Risk Period</p>
+                            <div id="leeds-elapsed" class="text-3xl font-mono font-bold text-white tracking-tighter">---</div>
                         </div>
-                        <div style="text-align:right;">
-                            <div style="color:#ff4747;font-size:0.85rem;font-weight:600;background:rgba(255,71,71,0.1);padding:4px 8px;border-radius:12px;display:inline-block;">NEW TODAY</div>
-                            <div style="color:#ffb347;font-size:1.1rem;font-weight:700;margin-top:5px;">&pound;285,000</div>
+                        <div class="bg-teal-500/10 border border-teal-500/30 p-5 rounded-2xl">
+                            <p class="text-[10px] font-black text-teal-400 uppercase mb-1 tracking-widest">Renters' Rights Deadline</p>
+                            <div id="rr-countdown" class="text-3xl font-mono font-bold text-white tracking-tighter">---</div>
                         </div>
                     </div>
-                    <div style="margin-top:15px;">
-                        <a href="#contact" style="color:#00bfae;text-decoration:none;font-weight:600;">&ud83d\udcde Schedule Viewing &rarr;</a>
-                    </div>
-                </div>
-            </section>
-        </div>
 
-        <!-- Area Reviews Tab -->
-        <div id="area-reviews" class="tab-content">
-            <section>
-                <h2 class="pop-heading">Area Reviews & Market Insights</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">In-depth analysis of property markets and exit opportunities across our service areas.</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:30px;">
-                    <!-- Cardiff Review -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">&nbsp; Cardiff Market Review</h3>
-                        <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                            <strong>HMO Yields:</strong> 8.7% in Cathays & Roath<br>
-                            <strong>Social Housing Demand:</strong> Very High<br>
-                            <strong>Exit Timeline:</strong> 4-6 weeks<br>
-                            <strong>Best For:</strong> Student HMOs, Social Housing
-                        </div>
-                        <div style="margin-top:15px;">
-                            <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">&nbsp; Full Cardiff Analysis &rarr;</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Barry Review -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">&nbsp; Barry Market Review</h3>
-                        <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                            <strong>Regeneration:</strong> &pound;20M government funding<br>
-                            <strong>Rent Growth:</strong> 8.5% YoY<br>
-                            <strong>Exit Timeline:</strong> 6-8 weeks<br>
-                            <strong>Best For:</strong> Lease Options, Social Housing
-                        </div>
-                        <div style="margin-top:15px;">
-                            <a href="#" style="color:#ffb347;text-decoration:none;font-weight:600;font-size:0.9rem;">&nbsp; Full Barry Analysis &rarr;</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Leicester Review -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">&nbsp; Leicester Market Review</h3>
-                        <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                            <strong>Student Market:</strong> 40,000+ students<br>
-                            <strong>Average Yields:</strong> 7-9%<br>
-                            <strong>Exit Timeline:</strong> 5-7 weeks<br>
-                            <strong>Best For:</strong> HMOs, Portfolio Exits
-                        </div>
-                        <div style="margin-top:15px;">
-                            <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">&nbsp; Full Leicester Analysis &rarr;</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Grimsby Review -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">&nbsp; Grimsby Market Review</h3>
-                        <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                            <strong>Property Prices:</strong> Below national average<br>
-                            <strong>Growth Potential:</strong> High<br>
-                            <strong>Exit Timeline:</strong> 3-5 weeks<br>
-                            <strong>Best For:</strong> Quick Exits, High Growth
-                        </div>
-                        <div style="margin-top:15px;">
-                            <a href="#" style="color:#ffb347;text-decoration:none;font-weight:600;font-size:0.9rem;">&nbsp; Full Grimsby Analysis &rarr;</a>
-                        </div>
-                    </div>
-                    
-                    <!-- Leeds Review -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">&nbsp; Leeds Market Review</h3>
-                        <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                            <strong>Northern Powerhouse:</strong> Major growth city<br>
-                            <strong>City Yields:</strong> 6-8%<br>
-                            <strong>Exit Timeline:</strong> 6-8 weeks<br>
-                            <strong>Best For:</strong> Premium HMOs, Long-term
-                        </div>
-                        <div style="margin-top:15px;">
-                            <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">&nbsp; Full Leeds Analysis &rarr;</a>
-                        </div>
+                    <div class="flex space-x-6 mb-8 text-gray-500 font-bold text-[10px] tracking-[0.3em] uppercase">
+                        <a href="#" target="_blank" class="hover:text-teal-400 transition">LinkedIn</a>
+                        <a href="#" target="_blank" class="hover:text-teal-400 transition">Instagram</a>
+                        <a href="#" target="_blank" class="hover:text-teal-400 transition">X-Twitter</a>
                     </div>
                 </div>
-                
-                <div style="background:rgba(255,179,71,0.1);border-left:4px solid #ffb347;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#00bfae;">&nbsp; Monthly Market Reports:</strong> Detailed analysis for each area delivered first Monday of every month. 
-                        <span style="color:#ffb347;font-weight:600;">Subscribe to get location-specific insights.</span>
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <!-- Education Tab -->
-        <div id="education" class="tab-content">
-            <section>
-                <h2 class="pop-heading">Landlord Exit Education Hub</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Free resources, guides, and insights to help you make informed exit decisions.</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin-top:30px;">
-                    <!-- Educational Guides -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">&nbsp; Exit Strategy Guides</h3>
-                        <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rarr; 5 Signs It's Time to Exit Your Portfolio</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rarr; Social Housing vs. Lease Options: Which Wins?</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rarr; Tax Planning for Property Exits</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rarr; Moving Abroad: Complete Exit Guide</a></li>
-                            <li><a href="#" style="color:#00bfae;text-decoration:none;">&rarr; HMO Conversion for Retirement Income</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Video Content -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">&nbsp; Video Tutorials</h3>
-                        <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">&rtrif; Lease Options Explained (12 min)</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">&rtrif; Social Housing Contracts Walkthrough</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">&rtrif; HMO Conversion Case Study</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">&rtrif; Client Success: Retiring Landlord Story</a></li>
-                            <li><a href="#" style="color:#ffb347;text-decoration:none;">&rtrif; Market Update: All Areas</a></li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Podcast Episodes -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">&nbsp; Landlord Exit Podcast</h3>
-                        <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rtrif; Ep 23: Retired at 55 with 8 Properties</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rtrif; Ep 22: Social Housing Expert Interview</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rtrif; Ep 21: Moving to Spain - Complete Guide</a></li>
-                            <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">&rtrif; Ep 20: HMO vs. Single Let Exits</a></li>
-                            <li><a href="#" style="color:#00bfae;text-decoration:none;">&rtrif; Ep 19: Tax Strategies for Exits</a></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div style="background:rgba(0,191,174,0.1);border-left:4px solid #00bfae;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#ffb347;">&nbsp; Weekly Education Newsletter:</strong> Get the latest guides, videos, and podcast episodes delivered every Tuesday. 
-                        <span style="color:#00bfae;font-weight:600;">Join 2,000+ landlords learning to exit successfully.</span>
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <!-- Tools Tab -->
-        <div id="tools" class="tab-content">
-            <section>
-                <h2 class="pop-heading">Interactive Exit Tools</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Calculate your exit potential and timeline with our free tools.</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:30px;">
-                    <!-- Exit Calculator -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.3rem;">&nbsp; Exit Strategy Calculator</h3>
-                        <p style="color:#e0e6ed;font-size:0.95rem;margin-top:10px;">See how much you could earn with different exit strategies.</p>
-                        
-                        <div style="margin-top:20px;">
-                            <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Property Value (&pound;)</label>
-                            <input type="number" id="property-value" placeholder="250000" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                            
-                            <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Current Monthly Rent (&pound;)</label>
-                            <input type="number" id="current-rent" placeholder="1200" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                            
-                            <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Exit Strategy</label>
-                            <select id="exit-strategy" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:20px;">
-                                <option value="social-housing">Social Housing Contract</option>
-                                <option value="lease-option">Purchase Lease Option</option>
-                                <option value="hmo">HMO Conversion</option>
-                            </select>
-                            
-                            <button onclick="calculateExit()" style="width:100%;background:linear-gradient(90deg,#00bfae 60%,#ffb347 100%);color:#232d3b;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:1rem;cursor:pointer;">Calculate My Exit Potential</button>
-                        </div>
-                        
-                        <div id="calculator-results" style="display:none;margin-top:20px;background:rgba(0,191,174,0.1);padding:15px;border-radius:8px;">
-                            <h4 style="color:#00bfae;margin-top:0;font-size:1.1rem;">Your Exit Results</h4>
-                            <div id="results-content" style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;margin-top:10px;"></div>
+                <div class="section-fade">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden border-4 border-white/5 shadow-2xl relative">
+                        <img src="ben-photo.jpg" alt="Ben Ogungbeje" class="w-full h-full object-cover">
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 p-8">
+                            <p class="text-white font-black text-2xl uppercase">Ben Ogungbeje</p>
+                            <p class="text-teal-400 font-bold text-xs uppercase tracking-widest">Property Strategy Expert</p>
                         </div>
                     </div>
-                    
-                    <!-- Timeline Estimator -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">&nbsp; Exit Timeline Estimator</h3>
-                        <p style="color:#e0e6ed;font-size:0.95rem;margin-top:10px;">Find out how quickly you can exit your property portfolio.</p>
-                        
-                        <div style="margin-top:20px;">
-                            <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Number of Properties</label>
-                            <input type="number" id="property-count" placeholder="3" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                            
-                            <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Property Locations</label>
-                            <select id="property-locations" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                                <option value="single">Single Location</option>
-                                <option value="multiple">Multiple Locations</option>
-                            </select>
-                            
-                            <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Current Tenancy Status</label>
-                            <select id="tenancy-status" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:20px;">
-                                <option value="all-tenanted">All Tenanted</option>
-                                <option value="some-vacant">Some Vacant</option>
-                                <option value="all-vacant">All Vacant</option>
-                            </select>
-                            
-                            <button onclick="calculateTimeline()" style="width:100%;background:linear-gradient(90deg,#ffb347 60%,#00bfae 100%);color:#232d3b;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:1rem;cursor:pointer;">Estimate My Timeline</button>
-                        </div>
-                        
-                        <div id="timeline-results" style="display:none;margin-top:20px;background:rgba(255,179,71,0.1);padding:15px;border-radius:8px;">
-                            <h4 style="color:#ffb347;margin-top:0;font-size:1.1rem;">Your Exit Timeline</h4>
-                            <div id="timeline-content" style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;margin-top:10px;"></div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="background:linear-gradient(135deg,rgba(0,191,174,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #00bfae;border-radius:14px;padding:25px;margin-top:30px;text-align:center;">
-                    <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">&nbsp; Get Personalized Results</h3>
-                    <p style="color:#e0e6ed;font-size:1.05rem;margin:15px 0;">Our tools give you estimates. For accurate calculations and personalized exit strategies, schedule a free consultation.</p>
-                    <a href="#contact" style="background:#fff;color:#00bfae;text-decoration:none;padding:15px 30px;border-radius:25px;font-weight:700;font-size:1.1rem;display:inline-block;">&nbsp; Get Exact Numbers</a>
-                </div>
-            </section>
-        </div>
-
-        <!-- Renters Reform Bill Tab -->
-        <div id="renters-bill" class="tab-content">
-            <section>
-                <h2 class="pop-heading">Renters Reform Bill: Your Exit Strategy</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">How new landlord legislation makes exiting the property market more attractive than ever.</p>
-                
-                <div style="background:linear-gradient(135deg,rgba(255,71,71,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #ff4747;border-radius:14px;padding:25px;margin-bottom:30px;position:relative;">
-                    <div style="position:absolute;top:-10px;left:20px;background:#ff4747;color:white;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">URGENT 2025</div>
-                    <h3 style="color:#ff4747;margin-top:10px;font-size:1.3rem;">&nbsp; Key Changes Affecting Landlords</h3>
-                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;margin-top:20px;">
-                        <div>
-                            <h4 style="color:#ffb347;font-size:1.1rem;margin-bottom:10px;">Section 21 Abolition</h4>
-                            <p style="color:#e0e6ed;font-size:0.95rem;line-height:1.5;">No more "no-fault" evictions. Landlords need specific grounds to regain possession.</p>
-                        </div>
-                        <div>
-                            <h4 style="color:#ffb347;font-size:1.1rem;margin-bottom:10px;">Lifetime Deposits</h4>
-                            <p style="color:#e0e6ed;font-size:0.95rem;line-height:1.5;">Portable deposits follow tenants between properties, increasing administrative burden.</p>
-                        </div>
-                        <div>
-                            <h4 style="color:#ffb347;font-size:1.1rem;margin-bottom:10px;">Stronger Tenant Rights</h4>
-                            <p style="color:#e0e6ed;font-size:0.95rem;line-height:1.5;">Enhanced protections make tenant management more challenging and costly.</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin-top:30px;">
-                    <!-- Why Exit Now -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ff4747;">
-                        <h3 style="color:#ff4747;margin-top:0;font-size:1.2rem;">&nbsp; Why Exit Now?</h3>
-                        <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                            <li style="margin-bottom:10px;">&bull; <strong>Increased Compliance Costs:</strong> New regulations mean higher expenses</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Reduced Control:</strong> Harder to manage difficult tenants</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Legal Risks:</strong> More potential for disputes and penalties</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Market Timing:</strong> Property values still strong in our areas</li>
-                            <li>&bull; <strong>Tax Changes:</strong> Potential future tax increases on landlords</li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Our Solutions -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">&nbsp; Our Bill-Proof Solutions</h3>
-                        <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                            <li style="margin-bottom:10px;">&bull; <strong>Social Housing:</strong> Local authorities handle all compliance</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Lease Options:</strong> Transfer management responsibilities</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>HMO Management:</strong> Professional teams handle regulations</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Guaranteed Income:</strong> Fixed rates regardless of legislation</li>
-                            <li>&bull; <strong>Zero Hassle:</strong> We handle all new requirements</li>
-                        </ul>
-                    </div>
-                    
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                        <h4 style="color:#00bfae;margin-top:0;font-size:1.1rem;">Get in Touch</h4>
-                        <p style="color:#e0e6ed;font-size:1rem;line-height:1.6;margin-top:10px;">
-                            Have a question or need more information? Send us a message and we'll get back to you within 24 hours.
-                        </p>
-                        <form>
-                            <input type="text" id="name" placeholder="Your Name" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                            <input type="email" id="email" placeholder="Your Email" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                            <textarea id="message" placeholder="Your Message" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:20px;"></textarea>
-                            <button style="width:100%;background:linear-gradient(90deg,#ffb347 60%,#00bfae 100%);color:#232d3b;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:1rem;cursor:pointer;">Send Message</button>
-                        </form>
-                <div style="margin-top:15px;text-align:right;">
-                    <div style="color:#ffb347;font-weight:600;">David M.</div>
-                    <div style="color:#b0b8c1;font-size:0.9rem;">Cardiff • Retired 2024</div>
                 </div>
             </div>
-            
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:24px;border:1.5px solid #ffb347;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#ffb347;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.85rem;font-weight:600;">MOVED ABROAD</div>
-                <div style="margin-top:15px;font-size:1.1rem;color:#e0e6ed;line-height:1.6;font-style:italic;">
-                    "Purchase lease option was perfect for my move to Spain. Ben handled everything while I focused on my new life abroad. Stress-free exit!"
-                </div>
-                <div style="margin-top:15px;text-align:right;">
-                    <div style="color:#00bfae;font-weight:600;">Sarah T.</div>
-                    <div style="color:#b0b8c1;font-size:0.9rem;">Barry • Spain 2024</div>
-                </div>
-            </div>
-            
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:24px;border:1.5px solid #00bfae;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#00bfae;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.85rem;font-weight:600;">HMO SPECIALIST</div>
-                <div style="margin-top:15px;font-size:1.1rem;color:#e0e6ed;line-height:1.6;font-style:italic;">
-                    "Converted my Cardiff properties into HMOs with Ben's expertise. Returns increased by 40% and I'm now ready to retire with confidence."
-                </div>
-                <div style="margin-top:15px;text-align:right;">
-                    <div style="color:#ffb347;font-weight:600;">Michael R.</div>
-                    <div style="color:#b0b8c1;font-size:0.9rem;">Leicester • Retiring 2025</div>
-                </div>
-            </div>
-        </div>
-        
-        <div style="background:rgba(0,191,174,0.1);border-left:4px solid #00bfae;padding:20px;border-radius:8px;margin-top:30px;">
-            <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                <strong style="color:#ffb347;">Your Success Story Next:</strong> Join dozens of landlords who've successfully exited the property market with our help. 
-                <span style="color:#00bfae;font-weight:600;">Schedule your free consultation today.</span>
-            </p>
-        </div>
-
-    <section id="contact">
-        <h2 class="fade-in-up fade-delay-2">Contact Me</h2>
-        <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Real exit strategies and their results. See how landlords are successfully exiting the market.</p>
-        
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;margin-top:30px;">
-            <!-- Deal 1 -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#00bfae;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">SOCIAL HOUSING</div>
-                <h4 style="color:#ffb347;margin-top:15px;font-size:1.1rem;">3-Bed Terrace • Cardiff</h4>
-                <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Landlord: Retiring to Spain</div>
-                
-                <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Previous Rent:</span>
-                        <span style="color:#ff6b6b;font-weight:600;">£850/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Social Housing Rate:</span>
-                        <span style="color:#00bfae;font-weight:600;">£1,100/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;">
-                        <span style="color:#b0b8c1;">5-Year Guarantee:</span>
-                        <span style="color:#ffb347;font-weight:600;">£66,000 Total</span>
-                    </div>
-                </div>
-                
-                <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                    <strong>Exit Timeline:</strong> 6 weeks<br>
-                    <strong>Management:</strong> Zero hassle<br>
-                    <strong>Result:</strong> 29% income increase, guaranteed income
-                </div>
-                <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">Read Full Analysis →</a>
-            </div>
-            
-            <!-- Deal 2 -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#ffb347;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">LEASE OPTION</div>
-                <h4 style="color:#00bfae;margin-top:15px;font-size:1.1rem;">2-Bed Flat • Barry</h4>
-                <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Landlord: Moving abroad</div>
-                
-                <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Property Value:</span>
-                        <span style="color:#ff6b6b;font-weight:600;">£180,000</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Option Payment:</span>
-                        <span style="color:#00bfae;font-weight:600;">£15,000</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;">
-                        <span style="color:#b0b8c1;">Monthly Income:</span>
-                        <span style="color:#ffb347;font-weight:600;">£650/month</span>
-                    </div>
-                </div>
-                
-                <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                    <strong>Exit Timeline:</strong> 8 weeks<br>
-                    <strong>Capital Released:</strong> £15,000<br>
-                    <strong>Result:</strong> Immediate cash + ongoing income
-                </div>
-                <a href="#" style="color:#ffb347;text-decoration:none;font-weight:600;font-size:0.9rem;">Read Full Analysis →</a>
-            </div>
-            
-            <!-- Deal 3 -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#00bfae;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">HMO CONVERSION</div>
-                <h4 style="color:#ffb347;margin-top:15px;font-size:1.1rem;">4-Bed House • Leicester</h4>
-                <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Landlord: Portfolio consolidation</div>
-                
-                <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Single Let Rent:</span>
-                        <span style="color:#ff6b6b;font-weight:600;">£950/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">HMO Gross Rent:</span>
-                        <span style="color:#00bfae;font-weight:600;">£1,800/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;">
-                        <span style="color:#b0b8c1;">Net Income:</span>
-                        <span style="color:#ffb347;font-weight:600;">£1,400/month</span>
-                    </div>
-                </div>
-                
-                <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                    <strong>Exit Timeline:</strong> 12 weeks<br>
-                    <strong>Income Increase:</strong> 47%<br>
-                    <strong>Result:</strong> Fully managed, high-yield exit
-                </div>
-                <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">Read Full Analysis →</a>
-            </div>
-        </div>
-        
-        <div style="background:rgba(0,191,174,0.1);border-left:4px solid #00bfae;padding:20px;border-radius:8px;margin-top:30px;">
-            <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                <strong style="color:#ffb347;">📊 New Deal Analysis Weekly:</strong> Get detailed breakdowns of successful exits delivered to your inbox. 
-                <span style="color:#00bfae;font-weight:600;">Subscribe to our exclusive deal analysis newsletter.</span>
-            </p>
-        </div>
-    </section>
-        <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">In-depth analysis of property markets and exit opportunities across our service areas.</p>
-        
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:30px;">
-            <!-- Cardiff Review -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cardiff Market Review</h3>
-                <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                    <strong>HMO Yields:</strong> 8.7% in Cathays & Roath<br>
-                    <strong>Social Housing Demand:</strong> Very High<br>
-                    <strong>Exit Timeline:</strong> 4-6 weeks<br>
-                    <strong>Best For:</strong> Student HMOs, Social Housing
-                </div>
-                <div style="margin-top:15px;">
-                    <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">📊 Full Cardiff Analysis →</a>
-                </div>
-            </div>
-            
-            <!-- Barry Review -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Barry Market Review</h3>
-                <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                    <strong>Regeneration:</strong> £20M government funding<br>
-                    <strong>Rent Growth:</strong> 8.5% YoY<br>
-                    <strong>Exit Timeline:</strong> 6-8 weeks<br>
-                    <strong>Best For:</strong> Lease Options, Social Housing
-                </div>
-                <div style="margin-top:15px;">
-                    <a href="#" style="color:#ffb347;text-decoration:none;font-weight:600;font-size:0.9rem;">📊 Full Barry Analysis →</a>
-                </div>
-            </div>
-            
-            <!-- Leicester Review -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Leicester Market Review</h3>
-                <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                    <strong>Student Market:</strong> 40,000+ students<br>
-                    <strong>Average Yields:</strong> 7-9%<br>
-                    <strong>Exit Timeline:</strong> 5-7 weeks<br>
-                    <strong>Best For:</strong> HMOs, Portfolio Exits
-                </div>
-                <div style="margin-top:15px;">
-                    <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">📊 Full Leicester Analysis →</a>
-                </div>
-            </div>
-            
-            <!-- Grimsby Review -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Grimsby Market Review</h3>
-                <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                    <strong>Property Prices:</strong> Below national average<br>
-                    <strong>Growth Potential:</strong> High<br>
-                    <strong>Exit Timeline:</strong> 3-5 weeks<br>
-                    <strong>Best For:</strong> Quick Exits, High Growth
-                </div>
-                <div style="margin-top:15px;">
-                    <a href="#" style="color:#ffb347;text-decoration:none;font-weight:600;font-size:0.9rem;">📊 Full Grimsby Analysis →</a>
-                </div>
-            </div>
-            
-            <!-- Leeds Review -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Leeds Market Review</h3>
-                <div style="color:#e0e6ed;font-size:0.95rem;margin-top:12px;line-height:1.6;">
-                    <strong>Northern Powerhouse:</strong> Major growth city<br>
-                    <strong>City Yields:</strong> 6-8%<br>
-                    <strong>Exit Timeline:</strong> 6-8 weeks<br>
-                    <strong>Best For:</strong> Premium HMOs, Long-term
-                </div>
-                <div style="margin-top:15px;">
-                    <a href="#" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">📊 Full Leeds Analysis →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div style="background:rgba(255,179,71,0.1);border-left:4px solid #ffb347;padding:20px;border-radius:8px;margin-top:30px;">
-            <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                <strong style="color:#00bfae;">📍 Monthly Market Reports:</strong> Detailed analysis for each area delivered first Monday of every month. 
-                <span style="color:#ffb347;font-weight:600;">Subscribe to get location-specific insights.</span>
-            </p>
         </div>
     </section>
 
-    <section>
-        <h2 class="pop-heading">Landlord Exit Education Hub</h2>
-        <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Free resources, guides, and insights to help you make informed exit decisions.</p>
-        
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin-top:30px;">
-            <!-- Educational Guides -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">📚 Exit Strategy Guides</h3>
-                <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">→ 5 Signs It's Time to Exit Your Portfolio</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">→ Social Housing vs. Lease Options: Which Wins?</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">→ Tax Planning for Property Exits</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">→ Moving Abroad: Complete Exit Guide</a></li>
-                    <li><a href="#" style="color:#00bfae;text-decoration:none;">→ HMO Conversion for Retirement Income</a></li>
-                </ul>
-            </div>
-            
-            <!-- Video Content -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">🎥 Video Tutorials</h3>
-                <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">▶️ Lease Options Explained (12 min)</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">▶️ Social Housing Contracts Walkthrough</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">▶️ HMO Conversion Case Study</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#ffb347;text-decoration:none;">▶️ Client Success: Retiring Landlord Story</a></li>
-                    <li><a href="#" style="color:#ffb347;text-decoration:none;">▶️ Market Update: All Areas</a></li>
-                </ul>
-            </div>
-            
-            <!-- Podcast Episodes -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">🎙️ Landlord Exit Podcast</h3>
-                <ul style="color:#e0e6ed;font-size:0.95rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">🎧 Ep 23: Retired at 55 with 8 Properties</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">🎧 Ep 22: Social Housing Expert Interview</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">🎧 Ep 21: Moving to Spain - Complete Guide</a></li>
-                    <li style="margin-bottom:10px;"><a href="#" style="color:#00bfae;text-decoration:none;">🎧 Ep 20: HMO vs. Single Let Exits</a></li>
-                    <li><a href="#" style="color:#00bfae;text-decoration:none;">🎧 Ep 19: Tax Strategies for Exits</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <!-- Book Reviews Section -->
-        <div style="margin-top:30px;">
-            <h3 style="color:#ffb347;font-size:1.3rem;margin-bottom:20px;">📖 Recommended Reading</h3>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-                <div style="background:rgba(0,191,174,0.1);border-radius:12px;padding:15px;border:1px solid #00bfae;">
-                    <h4 style="color:#00bfae;margin-top:0;font-size:1.05rem;">"Property Tax Guide"</h4>
-                    <p style="color:#e0e6ed;font-size:0.9rem;margin:8px 0;">Essential tax planning for landlords exiting the market.</p>
-                    <a href="#" style="color:#ffb347;text-decoration:none;font-size:0.85rem;font-weight:600;">Read Review →</a>
-                </div>
-                <div style="background:rgba(255,179,71,0.1);border-radius:12px;padding:15px;border:1px solid #ffb347;">
-                    <h4 style="color:#ffb347;margin-top:0;font-size:1.05rem;">"Retirement Planning"</h4>
-                    <p style="color:#e0e6ed;font-size:0.9rem;margin:8px 0;">Financial planning for property investors transitioning to retirement.</p>
-                    <a href="#" style="color:#00bfae;text-decoration:none;font-size:0.85rem;font-weight:600;">Read Review →</a>
-                </div>
-                <div style="background:rgba(0,191,174,0.1);border-radius:12px;padding:15px;border:1px solid #00bfae;">
-                    <h4 style="color:#00bfae;margin-top:0;font-size:1.05rem;">"Creative Finance"</h4>
-                    <p style="color:#e0e6ed;font-size:0.9rem;margin:8px 0;">Lease options and creative property strategies explained.</p>
-                    <a href="#" style="color:#ffb347;text-decoration:none;font-size:0.85rem;font-weight:600;">Read Review →</a>
-                </div>
-            </div>
-        </div>
-        
-        <div style="background:rgba(0,191,174,0.1);border-left:4px solid #00bfae;padding:20px;border-radius:8px;margin-top:30px;">
-            <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                <strong style="color:#ffb347;">📧 Weekly Education Newsletter:</strong> Get the latest guides, videos, and podcast episodes delivered every Tuesday. 
-                <span style="color:#00bfae;font-weight:600;">Join 2,000+ landlords learning to exit successfully.</span>
-            </p>
+    <section class="py-12 border-y border-gray-800 bg-white/5">
+        <div class="container mx-auto max-w-6xl grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+            <div class="section-fade"><p class="text-3xl font-black text-white">4 Cities</p><p class="text-[10px] text-teal-400 font-bold uppercase tracking-widest">Core Hubs</p></div>
+            <div class="section-fade"><p class="text-3xl font-black text-white">£0</p><p class="text-[10px] text-teal-400 font-bold uppercase tracking-widest">Management Fees</p></div>
+            <div class="section-fade"><p class="text-3xl font-black text-white">100%</p><p class="text-[10px] text-teal-400 font-bold uppercase tracking-widest">Compliance First</p></div>
+            <div class="section-fade"><p class="text-3xl font-black text-white">24h</p><p class="text-[10px] text-teal-400 font-bold uppercase tracking-widest">Response Time</p></div>
         </div>
     </section>
 
-        <!-- Deal Sourcing Tab -->
-        <div id="deal-sourcing" class="tab-content">
-            <section>
-                <h2 class="pop-heading">DEAL SOURCING</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Your Favourite Jehovah's Witness - A Log Series on Daily Deal Sourcing</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:30px;">
-                    <!-- Daily Deal Sourcing Log -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.3rem;">Daily Deal Sourcing Log</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Today's Activity:</strong><br>
-                            <strong>Properties Viewed:</strong> 12<br>
-                            <strong>Offers Made:</strong> 3<br>
-                            <strong>Deals Secured:</strong> 1<br>
-                            <strong>Market Update:</strong> Cardiff student demand rising
-                        </div>
-                    </div>
-                    
-                    <!-- Your Favourite Jehovah's Witness -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">Your Favourite Jehovah's Witness</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Personal Approach:</strong><br>
-                            <strong>Values-Driven Deal Making:</strong> Honesty and integrity<br>
-                            <strong>Community Focus:</strong> Helping landlords exit successfully<br>
-                            <strong>Ethical Sourcing:</strong> Win-win solutions<br>
-                            <strong>Long-Term Relationships:</strong> Building trust
-                        </div>
-                    </div>
+    <section id="process" class="py-24 px-4 bg-white/5">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-4xl font-black text-white mb-16 uppercase tracking-tighter">The 4-Step Exit Path</h2>
+            <div class="grid md:grid-cols-4 gap-8 text-left">
+                <div class="section-fade p-6 bg-gray-900/50 rounded-2xl border border-white/5">
+                    <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">1</div>
+                    <h4 class="font-bold mb-2 uppercase text-teal-400 text-sm">Portfolio Audit</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Risk analysis for your specific regional hubs like Leeds and Cardiff.</p>
                 </div>
-                
-                <!-- Recent Deal Analysis -->
-                <div style="margin-top:40px;">
-                    <h3 style="color:#ffb347;font-size:1.3rem;margin-bottom:20px;">Recent Deal Analysis</h3>
-                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;">
-                        <!-- Deal 1 -->
-                        <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                            <h4 style="color:#ffb347;margin-top:0;font-size:1.1rem;">Cardiff HMO Deal</h4>
-                            <div style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;">
-                                <strong>Property:</strong> 4-bed house<br>
-                                <strong>Strategy:</strong> HMO conversion<br>
-                                <strong>Potential Yield:</strong> 9.2%<br>
-                                <strong>Status:</strong> Under offer
-                            </div>
-                        </div>
-                        
-                        <!-- Deal 2 -->
-                        <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                            <h4 style="color:#00bfae;margin-top:0;font-size:1.1rem;">Leicester Lease Option</h4>
-                            <div style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;">
-                                <strong>Property:</strong> 3-bed flat<br>
-                                <strong>Strategy:</strong> Purchase lease option<br>
-                                <strong>Option Premium:</strong> &pound;15,000<br>
-                                <strong>Status:</strong> Due diligence
-                            </div>
-                        </div>
-                        
-                        <!-- Deal 3 -->
-                        <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                            <h4 style="color:#ffb347;margin-top:0;font-size:1.1rem;">Barry Social Housing</h4>
-                            <div style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;">
-                                <strong>Property:</strong> 2-bed terrace<br>
-                                <strong>Strategy:</strong> Social housing contract<br>
-                                <strong>Guaranteed Rent:</strong> &pound;950/month<br>
-                                <strong>Status:</strong> Contract signed
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-fade p-6 bg-gray-900/50 rounded-2xl border border-white/5">
+                    <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">2</div>
+                    <h4 class="font-bold mb-2 uppercase text-teal-400 text-sm">Strategy Match</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Identifying if PLO or Social Housing delivers the best yield/safety ratio.</p>
                 </div>
-                
-                <!-- Sourcing Strategy -->
-                <div style="margin-top:40px;">
-                    <h3 style="color:#00bfae;font-size:1.3rem;margin-bottom:20px;">Daily Sourcing Strategy</h3>
-                    <div style="background:linear-gradient(135deg,rgba(0,191,174,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #00bfae;border-radius:14px;padding:25px;">
-                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
-                            <div>
-                                <h4 style="color:#ffb347;font-size:1.1rem;margin-bottom:10px;">Morning Routine</h4>
-                                <ul style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;list-style:none;padding:0;">
-                                    <li style="margin-bottom:8px;">&bull; Market analysis</li>
-                                    <li style="margin-bottom:8px;">&bull; Property alerts review</li>
-                                    <li style="margin-bottom:8px;">&bull; Agent outreach</li>
-                                    <li>&bull; Deal pipeline planning</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="color:#00bfae;font-size:1.1rem;margin-bottom:10px;">Afternoon Action</h4>
-                                <ul style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;list-style:none;padding:0;">
-                                    <li style="margin-bottom:8px;">&bull; Property viewings</li>
-                                    <li style="margin-bottom:8px;">&bull; Offer negotiations</li>
-                                    <li style="margin-bottom:8px;">&bull; Due diligence</li>
-                                    <li>&bull; Client consultations</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="color:#ffb347;font-size:1.1rem;margin-bottom:10px;">Evening Review</h4>
-                                <ul style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;list-style:none;padding:0;">
-                                    <li style="margin-bottom:8px;">&bull; Deal analysis</li>
-                                    <li style="margin-bottom:8px;">&bull; Pipeline updates</li>
-                                    <li style="margin-bottom:8px;">&bull; Tomorrow's planning</li>
-                                    <li>&bull; Market research</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="section-fade p-6 bg-gray-900/50 rounded-2xl border border-white/5">
+                    <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">3</div>
+                    <h4 class="font-bold mb-2 uppercase text-teal-400 text-sm">Legal Setup</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Full legal transfer and compliance management paperwork handled by us.</p>
                 </div>
-                
-                <div style="background:rgba(255,179,71,0.1);border-left:4px solid #ffb347;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#00bfae;">&nbsp; Exclusive Deal Access:</strong> Join our inner circle to get first access to off-market deals and daily sourcing insights. 
-                        <span style="color:#ffb347;font-weight:600;">Partner with a values-driven deal sourcer who puts your success first.</span>
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <!-- Selective Licensing Tab -->
-        <div id="selective-licensing" class="tab-content">
-            <section>
-                <h2 class="pop-heading">Selective Licensing</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Leeds Selective Licensing requirements for landlords in designated areas.</p>
-                
-                <div style="background:linear-gradient(135deg,rgba(255,71,71,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #ff4747;border-radius:14px;padding:25px;margin-bottom:30px;position:relative;">
-                    <div style="position:absolute;top:-10px;left:20px;background:#ff4747;color:white;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;">URGENT 2026</div>
-                    <h3 style="color:#ff4747;margin-top:10px;font-size:1.3rem;">&nbsp; Designated Areas</h3>
-                    <p style="color:#e0e6ed;font-size:1rem;line-height:1.6;margin-top:15px;">
-                        If you rent out a property in certain parts of the <strong>Armley, Beeston and Holbeck, Burmantofts and Richmond Hill, Hunslet and Riverside, Gipton and Harehills, and Farnley and Wortley wards</strong>, you need to apply for a selective licence.
-                    </p>
-                </div>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:30px;">
-                    <!-- Licensing Requirements -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.3rem;">&nbsp; Key Requirements</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Deadline:</strong> Apply by 9 February 2026<br>
-                            <strong>New Purchases:</strong> Apply within 14 days<br>
-                            <strong>Failure Penalty:</strong> Up to &pound;30,000 per offence<br>
-                            <strong>Application Types:</strong> Online (&pound;1,100) or Paper (&pound;1,225)
-                        </div>
-                    </div>
-                    
-                    <!-- Fee Structure -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">&nbsp; Fee Structure (from 26 Feb 2026)</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Online Applications:</strong><br>
-                            First fee: &pound;400<br>
-                            Second fee: &pound;700 (&pound;550 for LRS members)<br><br>
-                            <strong>Paper Applications:</strong><br>
-                            First fee: &pound;525<br>
-                            Second fee: &pound;700 (&pound;550 for LRS members)
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Exempt Properties -->
-                <div style="margin-top:40px;">
-                    <h3 style="color:#ffb347;font-size:1.3rem;margin-bottom:20px;">Properties Which Do Not Need a Licence</h3>
-                    <div style="background:linear-gradient(135deg,rgba(0,191,174,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #00bfae;border-radius:14px;padding:25px;">
-                        <ul style="color:#e0e6ed;font-size:1rem;line-height:1.8;list-style:none;padding:0;">
-                            <li style="margin-bottom:10px;">&bull; <strong>Holiday lets</strong></li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Business premises</strong></li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Socially let properties</strong></li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Student accommodation owned by a university</strong></li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Accommodation where the tenant is a family member</strong></li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Any property where the landlord already holds an HMO licence</strong></li>
-                            <li>&bull; <strong>Properties that are empty</strong></li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Application Process -->
-                <div style="margin-top:40px;">
-                    <h3 style="color:#00bfae;font-size:1.3rem;margin-bottom:20px;">Application Process</h3>
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #ffb347;">
-                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-                            <div>
-                                <h4 style="color:#ffb347;font-size:1.1rem;margin-bottom:10px;">Before Applying</h4>
-                                <ul style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;list-style:none;padding:0;">
-                                    <li style="margin-bottom:8px;">&bull; Inform mortgage lender</li>
-                                    <li style="margin-bottom:8px;">&bull; Notify other owners</li>
-                                    <li style="margin-bottom:8px;">&bull; Contact property managers</li>
-                                    <li>&bull; Notify tenants (3+ year leases)</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="color:#00bfae;font-size:1.1rem;margin-bottom:10px;">Licence Conditions</h4>
-                                <ul style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;list-style:none;padding:0;">
-                                    <li style="margin-bottom:8px;">&bull; Gas safety certificates</li>
-                                    <li style="margin-bottom:8px;">&bull; Electrical safety</li>
-                                    <li style="margin-bottom:8px;">&bull; Smoke & CO alarms</li>
-                                    <li>&bull; Property inspections</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4 style="color:#ffb347;font-size:1.1rem;margin-bottom:10px;">Contact Information</h4>
-                                <div style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;">
-                                    <strong>Phone:</strong> 0113 535 1369<br>
-                                    <strong>Email:</strong> eswselective.licensing@leeds.gov.uk
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="background:rgba(255,179,71,0.1);border-left:4px solid #ffb347;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#00bfae;">&nbsp; UltraRentz Licensing Support:</strong> We handle all Leeds selective licensing applications from start to finish. 
-                        <span style="color:#ffb347;font-weight:600;">Ensure compliance and avoid penalties with our expert service.</span>
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <!-- Purchase Lease Options Tab -->
-        <div id="purchase-lease-options" class="tab-content">
-            <section>
-                <h2 class="pop-heading">Purchase Lease Options Explained</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">How purchase lease options work and why they're perfect for landlord exits.</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:30px;">
-                    <!-- How It Works -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.3rem;">&nbsp; How It Works</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Step 1:</strong> You sell us an option to buy your property<br>
-                            <strong>Step 2:</strong> We pay you an option premium (typically 5-10%)<br>
-                            <strong>Step 3:</strong> We manage the property and pay you monthly rent<br>
-                            <strong>Step 4:</strong> We exercise the option at the agreed price
-                        </div>
-                    </div>
-                    
-                    <!-- Benefits -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">&nbsp; Key Benefits</h3>
-                        <ul style="color:#e0e6ed;font-size:1rem;margin-top:15px;list-style:none;padding:0;line-height:1.8;">
-                            <li style="margin-bottom:10px;">&bull; <strong>Immediate Cash:</strong> Option premium paid upfront</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Ongoing Income:</strong> Monthly rent payments</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>Fixed Future Price:</strong> Purchase price locked in</li>
-                            <li style="margin-bottom:10px;">&bull; <strong>No Management:</strong> We handle everything</li>
-                            <li>&bull; <strong>Flexible Terms:</strong> Customized to your needs</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div style="background:rgba(255,179,71,0.1);border-left:4px solid #ffb347;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#00bfae;">&nbsp; Perfect For:</strong> Landlords wanting immediate cash flow while maintaining long-term property value growth. 
-                        <span style="color:#ffb347;font-weight:600;">Schedule a free consultation to explore your lease option options.</span>
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <!-- HMOs Tab -->
-        <div id="hmos" class="tab-content">
-            <section>
-                <h2 class="pop-heading">HMO Investment Guide</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Maximize rental returns through strategic HMO conversions and management.</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:30px;">
-                    <!-- HMO Strategy -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.3rem;">&nbsp; HMO Conversion Strategy</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Property Analysis:</strong> Identify high-yield conversion opportunities<br>
-                            <strong>Design Planning:</strong> Optimize room layouts for maximum returns<br>
-                            <strong>Conversion Works:</strong> Manage construction and licensing<br>
-                            <strong>Letting Strategy:</strong> Professional tenant management
-                        </div>
-                    </div>
-                    
-                    <!-- Income Potential -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">&nbsp; Income Potential</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Single Let:</strong> &pound;800-1,200/month<br>
-                            <strong>HMO Gross:</strong> &pound;1,800-3,500/month<br>
-                            <strong>Net Income:</strong> &pound;1,400-2,800/month<br>
-                            <strong>Yield Increase:</strong> 75-150%
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="background:rgba(0,191,174,0.1);border-left:4px solid #00bfae;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#ffb347;">&nbsp; HMO Management Service:</strong> Full conversion, licensing, and ongoing management. 
-                        <span style="color:#00bfae;font-weight:600;">Transform your property into a high-yield HMO investment.</span>
-                    </p>
-                </div>
-            </section>
-        </div>
-
-        <!-- Daily Property Tips Tab -->
-        <div id="daily-tips" class="tab-content">
-            <section>
-                <h2 class="pop-heading">Daily Property Investing Tips</h2>
-                <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Quick insights and actionable tips for property investors and landlords.</p>
-                
-                <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:25px;margin-top:30px;">
-                    <!-- Today's Tip -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">&nbsp; Today's Tip</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Market Timing:</strong> Best time to buy in our areas is Q1-Q2<br>
-                            <strong>Rental Demand:</strong> Student areas seeing 15% annual growth<br>
-                            <strong>Quick Action:</strong> Properties under &pound;250K moving fast
-                        </div>
-                    </div>
-                    
-                    <!-- Weekly Strategy -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;">
-                        <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">&nbsp; Weekly Strategy</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>Monday:</strong> Market research and area analysis<br>
-                            <strong>Tuesday:</strong> Property viewings and negotiations<br>
-                            <strong>Wednesday:</strong> Due diligence and legal checks<br>
-                            <strong>Thursday:</strong> Final offers and closing preparation
-                        </div>
-                    </div>
-                    
-                    <!-- Monthly Focus -->
-                    <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;">
-                        <h3 style="color:#ffb347;margin-top:0;font-size:1.2rem;">&nbsp; Monthly Focus</h3>
-                        <div style="color:#e0e6ed;font-size:1rem;line-height:1.6;">
-                            <strong>January:</strong> HMO licensing applications<br>
-                            <strong>February:</strong> Tax planning and portfolio review<br>
-                            <strong>March:</strong> Student market preparation<br>
-                            <strong>April:</strong> Summer rental season optimization
-                        </div>
-                    </div>
-                </div>
-                
-                <div style="background:rgba(255,179,71,0.1);border-left:4px solid #ffb347;padding:20px;border-radius:8px;margin-top:30px;">
-                    <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                        <strong style="color:#00bfae;">&nbsp; Daily Tips Newsletter:</strong> Get property investing insights delivered to your inbox every morning. 
-                        <span style="color:#ffb347;font-weight:600;">Join 5,000+ smart investors getting ahead of the market.</span>
-                    </p>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <section id="contact">
-        
-        <div style="margin-top:30px;">
-            <h3 style="color:#ffb347;font-size:1.3rem;margin-bottom:20px;">📋 Renters Reform Resources</h3>
-            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
-                <div style="background:rgba(255,71,71,0.1);border-radius:12px;padding:15px;border:1px solid #ff4747;">
-                    <h4 style="color:#ff4747;margin-top:0;font-size:1.05rem;">Complete Bill Breakdown</h4>
-                    <p style="color:#e0e6ed;font-size:0.9rem;margin:8px 0;">Detailed analysis of all changes affecting landlords.</p>
-                    <a href="#" style="color:#ff4747;text-decoration:none;font-size:0.85rem;font-weight:600;">Download Guide →</a>
-                </div>
-                <div style="background:rgba(0,191,174,0.1);border-radius:12px;padding:15px;border:1px solid #00bfae;">
-                    <h4 style="color:#00bfae;margin-top:0;font-size:1.05rem;">Exit Strategy Calculator</h4>
-                    <p style="color:#e0e6ed;font-size:0.9rem;margin:8px 0;">See how much you could save by exiting now.</p>
-                    <a href="#" style="color:#00bfae;text-decoration:none;font-size:0.85rem;font-weight:600;">Calculate Now →</a>
-                </div>
-                <div style="background:rgba(255,179,71,0.1);border-radius:12px;padding:15px;border:1px solid #ffb347;">
-                    <h4 style="color:#ffb347;margin-top:0;font-size:1.05rem;">Free Consultation</h4>
-                    <p style="color:#e0e6ed;font-size:0.9rem;margin:8px 0;">Discuss your options before the bill affects you.</p>
-                    <a href="#contact" style="color:#ffb347;text-decoration:none;font-size:0.85rem;font-weight:600;">Book Now →</a>
+                <div class="section-fade p-6 bg-gray-900/50 rounded-2xl border border-white/5">
+                    <div class="step-number w-10 h-10 rounded-full flex items-center justify-center font-bold mb-4">4</div>
+                    <h4 class="font-bold mb-2 uppercase text-teal-400 text-sm">The Exit</h4>
+                    <p class="text-xs text-gray-400 leading-relaxed">Start receiving guaranteed payments. Your management role ends here.</p>
                 </div>
             </div>
-        </div>
-        
-        <div style="background:linear-gradient(90deg,#ff4747 0%,#ffb347 100%);border-radius:12px;padding:25px;margin-top:30px;text-align:center;">
-            <h3 style="color:#fff;margin-top:0;font-size:1.4rem;font-weight:800;">Don't Wait for the Bill to Hit You</h3>
-            <p style="color:#fff;font-size:1.1rem;margin:15px 0;">Smart landlords are exiting now. Join them and secure your financial future.</p>
-            <a href="#contact" style="background:#fff;color:#ff4747;text-decoration:none;padding:15px 30px;border-radius:25px;font-weight:700;font-size:1.1rem;display:inline-block;">🚀 Exit Before the Bill</a>
         </div>
     </section>
 
-    <section>
-        <h2 class="pop-heading">Current Exit Opportunities</h2>
-        <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Hand-selected properties perfect for landlord exit strategies. Updated weekly.</p>
-        
-        <div style="background:linear-gradient(135deg,rgba(0,191,174,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #00bfae;border-radius:14px;padding:20px;margin-bottom:30px;">
-            <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:15px;">
-                <div>
-                    <h3 style="color:#00bfae;margin-top:0;font-size:1.2rem;">🔥 Hot Deal Alert</h3>
-                    <p style="color:#e0e6ed;font-size:0.95rem;margin:5px 0;">3-Bed HMO-Ready Property - Cardiff</p>
+    <section id="solutions" class="py-24 px-4 border-b border-gray-800">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-5xl font-black text-white mb-16 tracking-tighter uppercase">Our Core Strategies</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="bg-gray-900/80 p-10 rounded-[2.5rem] border border-teal-500/20 section-fade">
+                    <h3 class="text-3xl font-bold text-teal-400 mb-6 uppercase">Purchase Lease Options</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Guaranteed rent and locked-in future sale price today. Retain equity growth without the management burden.</p>
                 </div>
-                <div style="text-align:right;">
-                    <div style="color:#ff4747;font-size:0.85rem;font-weight:600;background:rgba(255,71,71,0.1);padding:4px 8px;border-radius:12px;display:inline-block;">NEW TODAY</div>
-                    <div style="color:#ffb347;font-size:1.1rem;font-weight:700;margin-top:5px;">£285,000</div>
+                <div class="bg-gray-900/80 p-10 rounded-[2.5rem] border border-amber-500/20 section-fade">
+                    <h3 class="text-3xl font-bold text-amber-400 mb-6 uppercase">Social Housing</h3>
+                    <p class="text-gray-300 leading-relaxed text-lg">Government-backed leases with zero voids and zero maintenance costs. High-yield security for long-term holds.</p>
                 </div>
             </div>
-            <div style="margin-top:15px;">
-                <a href="#contact" style="color:#00bfae;text-decoration:none;font-weight:600;">📞 Schedule Viewing →</a>
-            </div>
-        </div>
-        
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;margin-top:30px;">
-            <!-- Deal 1 -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#00bfae;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">SOCIAL HOUSING</div>
-                <h4 style="color:#ffb347;margin-top:15px;font-size:1.1rem;">2-Bed Flat • Barry</h4>
-                <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Perfect for social housing contract</div>
-                
-                <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Market Rent:</span>
-                        <span style="color:#ff6b6b;font-weight:600;">£750/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Social Rate:</span>
-                        <span style="color:#00bfae;font-weight:600;">£950/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;">
-                        <span style="color:#b0b8c1;">Property Value:</span>
-                        <span style="color:#ffb347;font-weight:600;">£195,000</span>
-                    </div>
-                </div>
-                
-                <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                    <strong>Exit Strategy:</strong> 5-year social housing contract<br>
-                    <strong>Timeline:</strong> 4 weeks<br>
-                    <strong>Yield:</strong> 5.8% guaranteed
-                </div>
-                <a href="#contact" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">📋 Get Details →</a>
-            </div>
-            
-            <!-- Deal 2 -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #ffb347;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#ffb347;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">LEASE OPTION</div>
-                <h4 style="color:#00bfae;margin-top:15px;font-size:1.1rem;">4-Bed House • Leicester</h4>
-                <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">HMO conversion potential</div>
-                
-                <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Current Value:</span>
-                        <span style="color:#ff6b6b;font-weight:600;">£320,000</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Option Payment:</span>
-                        <span style="color:#00bfae;font-weight:600;">£25,000</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;">
-                        <span style="color:#b0b8c1;">Monthly Cashflow:</span>
-                        <span style="color:#ffb347;font-weight:600;">£800/month</span>
-                    </div>
-                </div>
-                
-                <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                    <strong>Exit Strategy:</strong> 3-year lease option<br>
-                    <strong>Timeline:</strong> 6 weeks<br>
-                    <strong>Capital Released:</strong> £25,000
-                </div>
-                <a href="#contact" style="color:#ffb347;text-decoration:none;font-weight:600;font-size:0.9rem;">📋 Get Details →</a>
-            </div>
-            
-            <!-- Deal 3 -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:20px;border:1.5px solid #00bfae;position:relative;">
-                <div style="position:absolute;top:-10px;left:20px;background:#00bfae;color:#232d3b;padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:600;">HMO READY</div>
-                <h4 style="color:#ffb347;margin-top:15px;font-size:1.1rem;">5-Bed House • Leeds</h4>
-                <div style="color:#e0e6ed;font-size:0.9rem;margin-top:8px;">Near university campus</div>
-                
-                <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin:15px 0;">
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">Single Let:</span>
-                        <span style="color:#ff6b6b;font-weight:600;">£1,200/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
-                        <span style="color:#b0b8c1;">HMO Potential:</span>
-                        <span style="color:#00bfae;font-weight:600;">£2,800/month</span>
-                    </div>
-                    <div style="display:flex;justify-content:space-between;">
-                        <span style="color:#b0b8c1;">Property Value:</span>
-                        <span style="color:#ffb347;font-weight:600;">£425,000</span>
-                    </div>
-                </div>
-                
-                <div style="color:#e0e6ed;font-size:0.9rem;line-height:1.5;">
-                    <strong>Exit Strategy:</strong> Fully managed HMO<br>
-                    <strong>Timeline:</strong> 8 weeks<br>
-                    <strong>Yield Increase:</strong> 133%
-                </div>
-                <a href="#contact" style="color:#00bfae;text-decoration:none;font-weight:600;font-size:0.9rem;">📋 Get Details →</a>
-            </div>
-        </div>
-        
-        <div style="background:rgba(255,179,71,0.1);border-left:4px solid #ffb347;padding:20px;border-radius:8px;margin-top:30px;">
-            <p style="margin:0;color:#e0e6ed;font-size:1.05rem;line-height:1.6;">
-                <strong style="color:#00bfae;">🏷️ VIP Deal Access:</strong> Get exclusive access to off-market properties before they hit the open market. 
-                <span style="color:#ffb347;font-weight:600;">Join our VIP investor list for first-mover advantage.</span>
-            </p>
         </div>
     </section>
 
-    <section>
-        <h2 class="pop-heading">Interactive Exit Tools</h2>
-        <p style="color:#b0b8c1;font-size:1.1rem;margin-bottom:30px;">Calculate your exit potential and timeline with our free tools.</p>
-        
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:30px;margin-top:30px;">
-            <!-- Exit Calculator -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #00bfae;">
-                <h3 style="color:#ffb347;margin-top:0;font-size:1.3rem;">🧮 Exit Strategy Calculator</h3>
-                <p style="color:#e0e6ed;font-size:0.95rem;margin-top:10px;">See how much you could earn with different exit strategies.</p>
-                
-                <div style="margin-top:20px;">
-                    <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Property Value (£)</label>
-                    <input type="number" id="property-value" placeholder="250000" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                    
-                    <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Current Monthly Rent (£)</label>
-                    <input type="number" id="current-rent" placeholder="1200" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                    
-                    <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Exit Strategy</label>
-                    <select id="exit-strategy" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:20px;">
-                        <option value="social-housing">Social Housing Contract</option>
-                        <option value="lease-option">Purchase Lease Option</option>
-                        <option value="hmo">HMO Conversion</option>
-                    </select>
-                    
-                    <button onclick="calculateExit()" style="width:100%;background:linear-gradient(90deg,#00bfae 60%,#ffb347 100%);color:#232d3b;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:1rem;cursor:pointer;">Calculate My Exit Potential</button>
+    <section id="education-vault" class="py-24 px-4 border-b border-gray-800 bg-black/20">
+        <div class="container mx-auto max-w-6xl section-fade text-center">
+            <h2 class="text-5xl font-black text-white mb-12 uppercase tracking-tighter">Education Vault</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-left">
+                <div class="content-card">
+                    <p class="text-red-500 font-black text-[10px] uppercase mb-2">Legislative Alert</p>
+                    <h3 class="text-2xl font-bold mb-4">Renters' Rights Bill</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">The abolition of Section 21 and the shift to mandatory possession grounds. Prepare your portfolio before the May deadline.</p>
+                    <a href="https://wa.me/447471111593" class="text-teal-400 font-bold text-xs underline">Request Compliance Audit →</a>
                 </div>
-                
-                <div id="calculator-results" style="display:none;margin-top:20px;background:rgba(0,191,174,0.1);padding:15px;border-radius:8px;">
-                    <h4 style="color:#00bfae;margin-top:0;font-size:1.1rem;">Your Exit Results</h4>
-                    <div id="results-content" style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;margin-top:10px;"></div>
+                <div class="content-card">
+                    <p class="text-amber-500 font-black text-[10px] uppercase mb-2">Licensing Updates</p>
+                    <h3 class="text-2xl font-bold mb-4">Selective Licensing</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-4">Navigating Article 4 directions and mandatory licensing enforcement in Leeds, Leicester, and Cardiff.</p>
+                    <a href="#city-hubs" class="text-amber-400 font-bold text-xs underline">View City Reports ↓</a>
                 </div>
             </div>
-            
-            <!-- Timeline Estimator -->
-            <div style="background:linear-gradient(135deg,#232d3b 80%,#181c24 100%);border-radius:14px;padding:25px;border:1.5px solid #ffb347;">
-                <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">⏱️ Exit Timeline Estimator</h3>
-                <p style="color:#e0e6ed;font-size:0.95rem;margin-top:10px;">Find out how quickly you can exit your property portfolio.</p>
-                
-                <div style="margin-top:20px;">
-                    <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Number of Properties</label>
-                    <input type="number" id="property-count" placeholder="3" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                    
-                    <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Property Locations</label>
-                    <select id="property-locations" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:15px;">
-                        <option value="single">Single Location</option>
-                        <option value="multiple">Multiple Locations</option>
-                    </select>
-                    
-                    <label style="color:#b0b8c1;font-size:0.9rem;display:block;margin-bottom:5px;">Current Tenancy Status</label>
-                    <select id="tenancy-status" style="width:100%;padding:10px;border:1px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:6px;margin-bottom:20px;">
-                        <option value="all-tenanted">All Tenanted</option>
-                        <option value="some-vacant">Some Vacant</option>
-                        <option value="all-vacant">All Vacant</option>
-                    </select>
-                    
-                    <button onclick="calculateTimeline()" style="width:100%;background:linear-gradient(90deg,#ffb347 60%,#00bfae 100%);color:#232d3b;border:none;border-radius:8px;padding:12px;font-weight:700;font-size:1rem;cursor:pointer;">Estimate My Timeline</button>
-                </div>
-                
-                <div id="timeline-results" style="display:none;margin-top:20px;background:rgba(255,179,71,0.1);padding:15px;border-radius:8px;">
-                    <h4 style="color:#ffb347;margin-top:0;font-size:1.1rem;">Your Exit Timeline</h4>
-                    <div id="timeline-content" style="color:#e0e6ed;font-size:0.95rem;line-height:1.6;margin-top:10px;"></div>
-                </div>
-            </div>
-        </div>
-        
-        <div style="background:linear-gradient(135deg,rgba(0,191,174,0.1) 0%,rgba(255,179,71,0.1) 100%);border:2px solid #00bfae;border-radius:14px;padding:25px;margin-top:30px;text-align:center;">
-            <h3 style="color:#00bfae;margin-top:0;font-size:1.3rem;">📊 Get Personalized Results</h3>
-            <p style="color:#e0e6ed;font-size:1.05rem;margin:15px 0;">Our tools give you estimates. For accurate calculations and personalized exit strategies, schedule a free consultation.</p>
-            <a href="#contact" style="background:#fff;color:#00bfae;text-decoration:none;padding:15px 30px;border-radius:25px;font-weight:700;font-size:1.1rem;display:inline-block;">🎯 Get Exact Numbers</a>
         </div>
     </section>
+
+    <section id="city-hubs" class="py-24 px-4">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-4xl font-black text-white mb-12 uppercase tracking-tighter">Regional Content Hub</h2>
+            <div class="grid lg:grid-cols-2 gap-12 text-left">
+                <div class="bg-gray-800/20 p-8 rounded-3xl border border-white/5 section-fade">
+                    <h3 class="text-2xl font-bold mb-4">Leeds / Leicester / Cardiff</h3>
+                    <p class="text-xs text-teal-400 font-bold uppercase mb-4">Compliance Hub</p>
+                    <div class="content-stack">
+                        <h5 class="text-sm font-bold text-white mb-2 text-gray-500 italic">Survival Guide: Licensing & HMOs (Article Coming Soon)</h5>
+                    </div>
+                </div>
+                <div class="bg-gray-800/20 p-8 rounded-3xl border border-white/10 section-fade">
+                    <h3 class="text-2xl font-bold mb-4">Grimsby</h3>
+                    <p class="text-xs text-amber-400 font-bold uppercase mb-4">Social Housing Focus</p>
+                    <div class="content-stack border-l-4 border-amber-500">
+                        <p class="text-[9px] text-amber-400 font-black mb-1">FEATURED ARTICLE</p>
+                        <h5 class="text-sm font-bold text-white mb-2">The Grimsby Strategy: No Article 4, Pure Yield</h5>
+                        <p class="text-[10px] text-gray-500 mb-2">Why Grimsby remains the top choice for government-backed social housing exits.</p>
+                        <a href="#" class="text-xs text-teal-400 underline">Read Full Insight →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-hub" class="py-24 px-4 border-t border-gray-800">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid lg:grid-cols-2 gap-20">
+                <div class="section-fade">
+                    <h2 class="text-4xl font-black text-white mb-8 uppercase tracking-tighter">Answering Objections</h2>
+                    <div class="space-y-4">
+                        <div class="border-b border-white/10">
+                            <input type="checkbox" id="faq1" class="hidden faq-trigger">
+                            <label for="faq1" class="flex justify-between items-center py-4 cursor-pointer font-bold hover:text-teal-400 transition">How is the "Option Price" determined?<span class="text-teal-400">+</span></label>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-400 text-sm">We agree on a future sale price today—usually at or above current market value—giving you absolute financial certainty on exit.</div>
+                        </div>
+                        <div class="border-b border-white/10">
+                            <input type="checkbox" id="faq2" class="hidden faq-trigger">
+                            <label for="faq2" class="flex justify-between items-center py-4 cursor-pointer font-bold hover:text-teal-400 transition">What if the law changes again?<span class="text-teal-400">+</span></label>
+                            <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 text-gray-400 text-sm">Our strategies shift the burden. By moving to Social Housing or PLOs, the legal risk of "tenant management" is fully transferred to us.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-fade bg-gray-900/80 p-8 rounded-[2rem] border border-teal-500/10 shadow-2xl">
+                    <h3 class="text-2xl font-bold mb-6 uppercase">Book A Strategy Call</h3>
+                    <form action="mailto:ben@ultrarentz.com" method="post" enctype="text/plain" class="space-y-4">
+                        <input type="text" placeholder="Your Name" required class="w-full bg-gray-800 border border-white/10 p-4 rounded-xl outline-none focus:border-teal-400 transition">
+                        <input type="email" placeholder="Email Address" required class="w-full bg-gray-800 border border-white/10 p-4 rounded-xl outline-none focus:border-teal-400 transition">
+                        <textarea placeholder="Portfolio Details (HMOs, Buy-to-let, Locations)..." rows="4" class="w-full bg-gray-800 border border-white/10 p-4 rounded-xl outline-none focus:border-teal-400 transition"></textarea>
+                        <button type="submit" class="cta-button w-full py-4 rounded-xl font-bold uppercase tracking-widest shadow-lg">Submit Request</button>
+                    </form>
+                    <p class="text-[9px] text-gray-600 mt-4 text-center italic">RISK DISCLOSURE: All property strategies carry market risk. Professional legal advice is always recommended before signing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-gray-950 text-center border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="mb-8">
+                <p class="text-gray-400 font-bold text-xs uppercase tracking-widest mb-3">Direct Contact</p>
+                <a href="mailto:ben@ultrarentz.com" target="_blank" class="text-teal-400 hover:underline font-mono text-lg">ben@ultrarentz.com</a>
+                <p class="text-gray-500 text-xs mt-2 font-mono">+44 7471 111593</p>
+            </div>
+            <div class="flex justify-center space-x-8 mb-8 text-gray-500 font-bold text-[10px] tracking-widest uppercase">
+                <a href="#" target="_blank" class="hover:text-white transition">LinkedIn</a>
+                <a href="#" target="_blank" class="hover:text-white transition">Instagram</a>
+                <a href="#" target="_blank" class="hover:text-white transition">X-Twitter</a>
+            </div>
+            <p class="text-gray-600 text-[10px] font-bold tracking-[0.3em] uppercase mb-2">HMRC AML: XMML0000217696 | ICO: ZB929752 | PRS: PRS056607</p>
+            <p class="text-gray-600 text-[10px] uppercase font-bold">&copy; 2026 UltraRentz Ltd. Registered #16016083.</p>
+        </div>
+    </footer>
 
     <script>
-        // Tab switching functionality
-        function showTab(tabName) {
-            // Hide all tab contents
-            const allTabs = document.querySelectorAll('.tab-content');
-            allTabs.forEach(tab => {
-                tab.style.display = 'none';
-            });
-            
-            // Remove active class from all buttons
-            const allButtons = document.querySelectorAll('.tab-button');
-            allButtons.forEach(button => {
-                button.classList.remove('active');
-            });
-            
-            // Show selected tab
-            const selectedTab = document.getElementById(tabName);
-            if (selectedTab) {
-                selectedTab.style.display = 'block';
-            }
-            
-            // Add active class to clicked button
-            event.target.classList.add('active');
-        }
+        function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('active'); }
         
-        function calculateExit() {
-            const value = parseFloat(document.getElementById('property-value').value) || 250000;
-            const rent = parseFloat(document.getElementById('current-rent').value) || 1200;
-            const strategy = document.getElementById('exit-strategy').value;
+        function updateTimers() {
+            const now = new Date();
+            const leedsD = new Date("Feb 9, 2026 00:00:00");
+            const rrD = new Date("May 1, 2026 00:00:00");
             
-            let results = '';
+            // Leeds: Count UP since deadline
+            const diffL = now - leedsD;
+            const leedsDays = Math.floor(diffL / (1000 * 60 * 60 * 24));
+            document.getElementById("leeds-elapsed").innerText = `${leedsDays} Days`;
             
-            if (strategy === 'social-housing') {
-                const socialRent = rent * 1.15;
-                const annualIncome = socialRent * 12;
-                const fiveYearTotal = annualIncome * 5;
-                results = `
-                    <strong>Social Housing Contract:</strong><br>
-                    <strong>New Monthly Rent:</strong> &pound;${socialRent.toFixed(0)}<br>
-                    <strong>Annual Income:</strong> &pound;${annualIncome.toFixed(0)}<br>
-                    <strong>5-Year Guaranteed:</strong> &pound;${fiveYearTotal.toFixed(0)}<br>
-                    <strong>Timeline:</strong> 4-6 weeks<br>
-                    <strong>Management:</strong> Zero hassle
-                `;
-            } else if (strategy === 'lease-option') {
-                const optionPayment = value * 0.08;
-                const monthlyIncome = rent * 0.7;
-                results = `
-                    <strong>Purchase Lease Option:</strong><br>
-                    <strong>Option Payment:</strong> &pound;${optionPayment.toFixed(0)}<br>
-                    <strong>Monthly Income:</strong> &pound;${monthlyIncome.toFixed(0)}<br>
-                    <strong>Capital Released:</strong> &pound;${optionPayment.toFixed(0)}<br>
-                    <strong>Timeline:</strong> 6-8 weeks<br>
-                    <strong>Future Value:</strong> Fixed at &pound;${value.toFixed(0)}
-                `;
-            } else if (strategy === 'hmo') {
-                const hmoRent = rent * 2.2;
-                const netIncome = hmoRent * 0.75;
-                results = `
-                    <strong>HMO Conversion:</strong><br>
-                    <strong>Gross Monthly Rent:</strong> &pound;${hmoRent.toFixed(0)}<br>
-                    <strong>Net Monthly Income:</strong> &pound;${netIncome.toFixed(0)}<br>
-                    <strong>Income Increase:</strong> ${((netIncome/rent - 1) * 100).toFixed(0)}%<br>
-                    <strong>Timeline:</strong> 8-12 weeks<br>
-                    <strong>Management:</strong> Fully included
-                `;
+            // Renters Rights: LIVE Per-Second Countdown
+            const diffR = rrD - now;
+            if(diffR > 0) {
+                const d = Math.floor(diffR / (1000 * 60 * 60 * 24));
+                const h = Math.floor((diffR % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diffR % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diffR % (1000 * 60)) / 1000);
+                document.getElementById("rr-countdown").innerText = `${d}d ${h}h ${m}m ${s}s`;
+            } else { 
+                document.getElementById("rr-countdown").innerText = "BILL ACTIVE"; 
             }
-            
-            document.getElementById('results-content').innerHTML = results;
-            document.getElementById('calculator-results').style.display = 'block';
         }
-        
-        function calculateTimeline() {
-            const count = parseInt(document.getElementById('property-count').value) || 3;
-            const locations = document.getElementById('property-locations').value;
-            const tenancy = document.getElementById('tenancy-status').value;
-            
-            let baseWeeks = 4;
-            
-            if (count > 5) baseWeeks += 2;
-            if (locations === 'multiple') baseWeeks += 2;
-            if (tenancy === 'all-tenanted') baseWeeks += 3;
-            if (tenancy === 'some-vacant') baseWeeks += 1;
-            
-            const totalWeeks = baseWeeks;
-            const totalDays = totalWeeks * 7;
-            
-            const results = `
-                <strong>Estimated Exit Timeline:</strong><br>
-                <strong>Total Properties:</strong> ${count}<br>
-                <strong>Processing Time:</strong> ${totalWeeks} weeks (${totalDays} days)<br>
-                <strong>First Property:</strong> ${Math.max(2, totalWeeks - 2)} weeks<br>
-                <strong>All Properties:</strong> ${totalWeeks} weeks<br>
-                <strong>Ready Date:</strong> ${new Date(Date.now() + totalDays * 24 * 60 * 60 * 1000).toLocaleDateString('en-GB')}
-            `;
-            
-            document.getElementById('timeline-content').innerHTML = results;
-            document.getElementById('timeline-results').style.display = 'block';
-        }
+
+        setInterval(updateTimers, 1000); 
+        updateTimers();
+
+        // Animation observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.section-fade').forEach((s) => observer.observe(s));
     </script>
-
-    <section id="contact">
-        <h2 class="fade-in-up fade-delay-2">Contact Me</h2>
-        <div class="fade-in-up fade-delay-3" style="display:flex;align-items:center;gap:24px;margin-bottom:18px;">
-            <img src="ben-photo.jpg" alt="Adegbenga (Ben) Ogungbeje" style="border-radius:50%;box-shadow:0 2px 12px #181c24;min-width:72px;width:96px;height:96px;object-fit:cover;">
-            <div>
-                <div style="font-size:1.1rem;font-weight:600;color:#ffb347;margin-bottom:4px;">Adegbenga (Ben) Ogungbeje</div>
-                <div style="color:#b0b8c1;font-size:0.98rem;">Founder, UltraRentz Ltd</div>
-                <div style="margin-top:8px;font-size:1.05rem;color:#e0e6ed;">Get exclusive access to off-market deals and expert property sourcing advice.</div>
-            </div>
-        </div>
-        <ul class="fade-in-up fade-delay-4" style="list-style:none; padding:0; margin-bottom:18px;">
-            <li><b>Email:</b> <a href="mailto:ben@ultrarentz.co.site" target="_blank">ben@ultrarentz.co.site</a></li>
-            <li><b>Phone:</b> <a href="tel:+447471111593" target="_blank">074 71111 593</a></li>
-            <li style="margin-top:8px;">
-                <!-- LinkedIn link to be added later -->
-                <a href="https://wa.me/447471111593" target="_blank" style="color:#25d366;text-decoration:none;font-size:1.2rem;">WhatsApp</a>
-            </li>
-        </ul>
-        <form class="fade-in-up fade-delay-5" style="margin-bottom:10px;">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="tel" name="phone" placeholder="Your Phone Number (Optional)">
-            
-            <select name="exit_strategy" required style="padding:13px;border:1.5px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:8px;font-size:1.08rem;">
-                <option value="">Select Your Exit Strategy</option>
-                <option value="social-housing">Social Housing Contract</option>
-                <option value="lease-option">Purchase Lease Option</option>
-                <option value="hmo-conversion">HMO Conversion</option>
-                <option value="portfolio-sale">Portfolio Sale</option>
-                <option value="retiring">Retiring Soon</option>
-                <option value="moving-abroad">Moving Abroad</option>
-                <option value="not-sure">Not Sure - Need Advice</option>
-            </select>
-            
-            <select name="property-count" required style="padding:13px;border:1.5px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:8px;font-size:1.08rem;">
-                <option value="">Number of Properties</option>
-                <option value="1">1 Property</option>
-                <option value="2-3">2-3 Properties</option>
-                <option value="4-6">4-6 Properties</option>
-                <option value="7-10">7-10 Properties</option>
-                <option value="10+">10+ Properties</option>
-            </select>
-            
-            <select name="location" required style="padding:13px;border:1.5px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:8px;font-size:1.08rem;">
-                <option value="">Primary Property Location</option>
-                <option value="cardiff">Cardiff</option>
-                <option value="barry">Barry</option>
-                <option value="leicester">Leicester</option>
-                <option value="grimsby">Grimsby</option>
-                <option value="leeds">Leeds</option>
-                <option value="multiple">Multiple Locations</option>
-                <option value="other">Other</option>
-            </select>
-            
-            <select name="timeline" required style="padding:13px;border:1.5px solid #3a4256;background:#181c24;color:#e0e6ed;border-radius:8px;font-size:1.08rem;">
-                <option value="">Your Exit Timeline</option>
-                <option value="urgent">Urgent (Within 1 month)</option>
-                <option value="soon">Soon (1-3 months)</option>
-                <option value="planning">Planning (3-6 months)</option>
-                <option value="exploring">Just Exploring Options</option>
-            </select>
-            
-            <textarea name="message" rows="4" placeholder="Tell us about your situation and goals..." required></textarea>
-            
-            <div style="background:rgba(0,191,174,0.1);padding:12px;border-radius:8px;margin-bottom:15px;">
-                <p style="margin:0;color:#00bfae;font-size:0.95rem;font-weight:600;">
-                    🎯 <strong>Priority Response:</strong> Landlords with 3+ properties or urgent timelines get same-day consultation scheduling
-                </p>
-            </div>
-            
-            <button type="submit" onclick="event.preventDefault();document.getElementById('thankyou-message').style.display='block';">Get Your Free Exit Strategy</button>
-        </form>
-        <div id="thankyou-message" style="display:none;background:#232d3b;color:#00bfae;padding:14px 18px;border-radius:8px;font-size:1.08rem;margin-bottom:10px;box-shadow:0 2px 8px #181c24;">
-            <strong>🎯 Priority Response Confirmed!</strong><br>
-            Thank you for your message! I'll contact you within 24 hours to schedule your free exit strategy consultation.
-        </div>
-        </form>
-        
-        <!-- Urgency/Scarcity Elements -->
-        <div style="background:linear-gradient(135deg,rgba(255,179,71,0.15) 0%,rgba(0,191,174,0.15) 100%);border:2px solid #ffb347;border-radius:12px;padding:20px;margin-top:25px;position:relative;overflow:hidden;">
-            <div style="position:absolute;top:-5px;right:-5px;background:#ff4444;color:white;padding:4px 12px;border-radius:20px;font-size:0.8rem;font-weight:600;transform:rotate(15deg);">LIMITED</div>
-            <h4 style="color:#ffb347;margin-top:0;font-size:1.2rem;">⚠️ Time-Sensitive Opportunity</h4>
-            <ul style="color:#e0e6ed;font-size:1rem;margin-top:15px;list-style:none;padding:0;">
-                <li style="margin-bottom:10px;">🔥 <strong>Only 2 spots remaining</strong> this month for personalized exit strategies</li>
-                <li style="margin-bottom:10px;">📈 <strong>Market conditions changing</strong> - act now to secure best terms</li>
-                <li style="margin-bottom:10px;">🎯 <strong>Priority processing</strong> for landlords with 3+ properties</li>
-                <li>📞 <strong>Same-day consultation</strong> available this week only</li>
-            </ul>
-            <div style="background:rgba(0,0,0,0.2);padding:12px;border-radius:8px;margin-top:15px;">
-                <p style="margin:0;color:#fff;font-size:1rem;text-align:center;font-weight:600;">
-                    <strong>Next Available Consultation: Tomorrow at 2:00 PM</strong><br>
-                    <span style="font-size:0.9rem;color:#ffb347;">Book now before this slot is taken</span>
-                </p>
-            </div>
-        </div>
-        
-        <div class="fade-in-up fade-delay-5" style="font-size:0.98rem;color:#b0b8c1;margin-bottom:10px;">Your details are safe and never shared. I reply to all messages within 24 hours.</div>
-        
-        <!-- Final CTA -->
-        <div style="background:linear-gradient(90deg,#00bfae 0%,#ffb347 100%);border-radius:12px;padding:25px;margin-top:20px;text-align:center;">
-            <h3 style="color:#232d3b;margin-top:0;font-size:1.4rem;font-weight:800;">Ready to Exit Stress-Free?</h3>
-            <p style="color:#181c24;font-size:1.1rem;margin:15px 0;">Join 50+ landlords who've successfully exited the property market with our help</p>
-            <div style="display:flex;gap:15px;justify-content:center;flex-wrap:wrap;">
-                <a href="tel:+447471111593" style="background:#232d3b;color:#ffb347;text-decoration:none;padding:15px 30px;border-radius:25px;font-weight:700;font-size:1.1rem;transition:transform 0.3s;">📞 Call Now</a>
-                <a href="https://wa.me/447471111593" style="background:#fff;color:#232d3b;text-decoration:none;padding:15px 30px;border-radius:25px;font-weight:700;font-size:1.1rem;transition:transform 0.3s;">💬 WhatsApp</a>
-            </div>
-        </div>
-    </section>
-
 </body>
 </html>
